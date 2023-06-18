@@ -10,40 +10,12 @@ const Navbar = () => {
     const [isHover, setIsHover] = useState(false);
     const navigate = useNavigate();
 
-    // styles
-    const ballsStyle = {
-        backgroundColor: isDarkMode ? 'rgba(235, 247, 255, 0.664)' : 'rgba(0, 0, 0, 0.8)'
-    }
-
     const bgSwipeUp = () => {
         if (isDarkMode && isHover) return 'black'
         else if (isDarkMode && !isHover) return 'rgb(0, 255, 0)'
         else if (!isDarkMode && isHover) return 'black'
         return 'black'
     }
-    
-    const swipeUpStyle = {
-        top: isOpened ? 'calc(100vh - 100px)' : '70px',
-        color: {bgSwipeUp},
-    }
-    
-
-    // Functions
-    const handleNavbarHeight = () => {
-        setIsOpened(!isOpened);
-    }
-
-    const changeMode = () => {
-        setIsDarkMode(!isDarkMode);
-    }
-
-    const handleMouseEnter = () => {
-        setIsHover(true);
-    };
-    
-    const handleMouseLeave = () => {
-        setIsHover(false);
-    };
 
     const setNavbarBackground = () => {
         if (isDarkMode && isOpened) {
@@ -56,15 +28,45 @@ const Navbar = () => {
         return 'rgba(0,0,0,0.8)'
     }
 
+
+    // styles
+    const ballsStyle = {
+        backgroundColor: isDarkMode ? 'rgba(235, 247, 255, 0.664)' : 'rgba(0, 0, 0, 0.8)'
+    }
+
+    const navbarStyle = {
+        height: isOpened ? '100vh' : '70px',
+        backgroundColor: isDarkMode ? 'black' : '#d8d5d5',
+        position: 'sticky'
+    }
+
+    
+    const swipeUpStyle = {
+        top: isOpened ? 'calc(100vh - 100px)' : '70px',
+        color: {bgSwipeUp},
+    }
+    
+    
+    // Functions
+    const handleNavbarHeight = () => {
+        setIsOpened(!isOpened);
+    }
+    
+    const changeMode = () => {
+        setIsDarkMode(!isDarkMode);
+    }
+    
+    const handleMouseEnter = () => {
+        setIsHover(true);
+    };
+    
+    const handleMouseLeave = () => {
+        setIsHover(false);
+    };
+    
     return (
         <div style={{position: 'fixed', width: '100%'}}>
-            <nav style={
-                    {
-                        height: isOpened ? '100vh' : '70px',
-                        backgroundColor: isDarkMode ? 'black' : '#d8d5d5',
-                        position: 'sticky'
-                    }
-                }>
+            <nav style={navbarStyle}>
                 <div style={ballsStyle} className='navbar-decoration dec1'></div>
                 <div style={ballsStyle} className='navbar-decoration dec2'></div>
                 <div style={ballsStyle} className='navbar-decoration dec3'></div>
@@ -74,10 +76,10 @@ const Navbar = () => {
                 <div style={ballsStyle} className='navbar-decoration dec7'></div>
                 <div style={ballsStyle} className='navbar-decoration dec8'></div>
                 <div className="navbar-container" style={
-                        {
-                            backgroundColor: `${setNavbarBackground()}`,
-                        }
-                    }>
+                    {
+                        backgroundColor: `${setNavbarBackground()}`,
+                    }
+                }>
             
                     <div className='navbar-links'>
                         <Link className='navbar-link' to='/' onClick={handleNavbarHeight}> Home </Link>
@@ -87,7 +89,9 @@ const Navbar = () => {
                         <Link className='navbar-link' to='/about'> About </Link>
                         <Link className='navbar-link' to='/contact'> Contact </Link>
                     </div>
-                    <button onClick={changeMode}>A</button>
+                    
+                    <button onClick={changeMode} className='toggle-theme'>A</button>
+
                 </div>
             
                 <button className='swipe-up' style={swipeUpStyle} onClick={() => {
