@@ -89,8 +89,13 @@ const Navbar = () => {
                         <Link className='navbar-link' to='/about'> About </Link>
                         <Link className='navbar-link' to='/contact'> Contact </Link>
                     </div>
-                    
-                    <button onClick={changeMode} className='toggle-theme'>A</button>
+
+                    <div class="toggle-switch">
+                        <label class="switch-label">
+                            <input onClick={changeMode} type="checkbox" class="checkbox" />
+                            <span class="slider"></span>
+                        </label>
+                    </div>  
 
                 </div>
             
