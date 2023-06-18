@@ -57,49 +57,48 @@ const Navbar = () => {
     }
 
     return (
-        <nav style={
-                {
-                    height: isOpened ? '100vh' : '70px', 
-                    backgroundColor: isDarkMode ? 'black' : '#d8d5d5',
-                }
-            }>
-
-            <div style={ballsStyle} className='navbar-decoration dec1'></div>
-            <div style={ballsStyle} className='navbar-decoration dec2'></div>
-            <div style={ballsStyle} className='navbar-decoration dec3'></div>
-            <div style={ballsStyle} className='navbar-decoration dec4'></div>
-            <div style={ballsStyle} className='navbar-decoration dec5'></div>
-            <div style={ballsStyle} className='navbar-decoration dec6'></div>
-            <div style={ballsStyle} className='navbar-decoration dec7'></div>
-            <div style={ballsStyle} className='navbar-decoration dec8'></div>
-
-
-            <div className="navbar-container" style={
+        <div style={{position: 'fixed', width: '100%'}}>
+            <nav style={
                     {
-                        backgroundColor: `${setNavbarBackground()}`,
+                        height: isOpened ? '100vh' : '70px',
+                        backgroundColor: isDarkMode ? 'black' : '#d8d5d5',
+                        position: 'sticky'
                     }
                 }>
-                    
-                <div className='navbar-links'>
-                    <Link className='navbar-link' to='/' onClick={handleNavbarHeight}> Home </Link>
-                    <Link className='navbar-link' to='/projects' onClick={() => {
-                        setIsOpened(false);
-                    }}> Projects </Link>
-                    <Link className='navbar-link' to='/about'> About </Link>
-                    <Link className='navbar-link' to='/contact'> Contact </Link>
-                </div>
-
-                <button onClick={changeMode}>A</button>
-            </div>
+                <div style={ballsStyle} className='navbar-decoration dec1'></div>
+                <div style={ballsStyle} className='navbar-decoration dec2'></div>
+                <div style={ballsStyle} className='navbar-decoration dec3'></div>
+                <div style={ballsStyle} className='navbar-decoration dec4'></div>
+                <div style={ballsStyle} className='navbar-decoration dec5'></div>
+                <div style={ballsStyle} className='navbar-decoration dec6'></div>
+                <div style={ballsStyle} className='navbar-decoration dec7'></div>
+                <div style={ballsStyle} className='navbar-decoration dec8'></div>
+                <div className="navbar-container" style={
+                        {
+                            backgroundColor: `${setNavbarBackground()}`,
+                        }
+                    }>
             
-            <button className='swipe-up' style={swipeUpStyle} onClick={() => {
-                handleNavbarHeight();
-                navigate('/projects');
-            }} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> 
-                <FontAwesomeIcon icon={faArrowUpLong} />
-                <span>Projects</span>
-            </button>
-        </nav>
+                    <div className='navbar-links'>
+                        <Link className='navbar-link' to='/' onClick={handleNavbarHeight}> Home </Link>
+                        <Link className='navbar-link' to='/projects' onClick={() => {
+                            setIsOpened(false);
+                        }}> Projects </Link>
+                        <Link className='navbar-link' to='/about'> About </Link>
+                        <Link className='navbar-link' to='/contact'> Contact </Link>
+                    </div>
+                    <button onClick={changeMode}>A</button>
+                </div>
+            
+                <button className='swipe-up' style={swipeUpStyle} onClick={() => {
+                    handleNavbarHeight();
+                    navigate('/projects');
+                }} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <FontAwesomeIcon icon={faArrowUpLong} />
+                    <span>Projects</span>
+                </button>
+            </nav>
+        </div>
     );
 }
 
