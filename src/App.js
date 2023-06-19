@@ -8,6 +8,10 @@ function App() {
     <Router>
       <main>
         <Navbar />
+        <br />
+        <br /> 
+        <br />
+        <br /> 
         <Routes>
           <Route path='/' element></Route>
           <Route path='/projects' element={<Projects />}></Route>

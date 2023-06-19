@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './Navbar.styles.scss'
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpLong, faFontAwesomeLogoFull, faMailForward } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpLong } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -12,52 +12,35 @@ const Navbar = () => {
     let totalWaitTime = 60;
     let isIncreasing = false, wait = totalWaitTime, option = 0;
     const [isOpened, setIsOpened] = useState(true);
-    const [isDarkMode, setIsDarkMode] = useState(true);
     const [isHover, setIsHover] = useState(false);
     const [profesion, setProfesion] = useState('Front-end Developer.')
     const navigate = useNavigate();
 
     const bgSwipeUp = () => {
-        if (isDarkMode && isHover) return 'black'
-        else if (isDarkMode && !isHover) return 'rgb(0, 255, 0)'
-        else if (!isDarkMode && isHover) return 'white'
-        return 'black'
+        return isHover ? 'black' : 'rgb(0,255,0)'
     }
 
     const borderSwipeUp = () => {
-        if (isDarkMode && isHover) return '1px solid white'
-        else if (isDarkMode && !isHover) return '1px solid rgb(0, 255, 0)'
-        else if (!isDarkMode && isHover) return '1px solid white'
-        return '1px solid black'
+        return isHover ? '1px solid white' : '1px solid rgb(0,255,0)'
     }
 
     const bgColorSwipeUp = () => {
-        if (isDarkMode && isHover) return 'white'
-        else if (isDarkMode && !isHover) return ''
-        else if (!isDarkMode && isHover) return 'black'
-        return ''
+        return isHover ? 'white' : '' 
     }
 
     const setNavbarBackground = () => {
-        if (isDarkMode && isOpened) {
-            return 'black';
-        } else if (isDarkMode && !isOpened) {
-            return 'rgb(0,0,0,0.6)'
-        } else if (!isDarkMode && isOpened) {
-            return 'black'
-        }
-        return 'rgba(0,0,0,0.8)'
+        return isOpened ? 'black' : 'rgb(0,0,0,0.6';
     }
 
 
     // styles
     const ballsStyle = {
-        backgroundColor: isDarkMode ? 'rgba(161, 31, 31, 0.664)' : 'rgba(0, 0, 0, 0.8)'
+        backgroundColor: 'rgba(161, 31, 31, 0.664)'
     }
 
     const navbarStyle = {
         height: isOpened ? '100vh' : '70px',
-        backgroundColor: isDarkMode ? 'black' : '#d8d5d5',
+        backgroundColor: 'black',
         position: 'sticky'
     }
     /* */
@@ -72,10 +55,6 @@ const Navbar = () => {
     // Functions
     const handleNavbarHeight = () => {
         setIsOpened(!isOpened);
-    }
-    
-    const changeMode = () => {
-        setIsDarkMode(!isDarkMode);
     }
     
     const handleMouseEnter = () => {
@@ -124,12 +103,15 @@ const Navbar = () => {
                 <div style={ballsStyle} className='navbar-decoration dec6'></div>
                 <div style={ballsStyle} className='navbar-decoration dec7'></div>
                 <div style={ballsStyle} className='navbar-decoration dec8'></div>
+
                 <div className="navbar-container" style={
                     {
                         backgroundColor: `${setNavbarBackground()}`,
                     }
                 }>
-            
+                    
+                    <span className='logo' onClick={handleNavbarHeight} >Camargo.dev</span>
+
                     <div className='navbar-links'>
                         <Link className='navbar-link' to='/' onClick={handleNavbarHeight}> Home </Link>
                         <Link className='navbar-link' to='/projects' onClick={() => {
@@ -139,12 +121,15 @@ const Navbar = () => {
                         <Link className='navbar-link' to='/contact'> Contact </Link>
                     </div>
 
-                    <div className="toggle-switch">
-                        <label className="switch-label">
-                            <input onClick={changeMode} type="checkbox" className="checkbox" />
-                            <span className="slider"></span>
-                        </label>
-                    </div>  
+                    <div className='mobile-navbar'>
+                        <div className='menu-strip'></div>
+                        <div className='menu-strip'></div>
+                        <div className='menu-strip'></div>
+                        <span>Menu</span>
+                        <div className='menu'>
+
+                        </div>
+                    </div>
 
                 </div>
 
@@ -155,6 +140,8 @@ const Navbar = () => {
                             <h1>Pedro Augusto Camargo</h1>
                             <h2 className="subtitle"> {profesion} </h2>
                         </div>
+
+                        {/* Desktop Social icons */}
                         <div className='social'>
                             <div className='strip1'></div>
                             <div className='strip2'></div>
@@ -167,15 +154,19 @@ const Navbar = () => {
                             
                         </div>
                     </div>
-                    <div className='profile-section'></div>
+                    <div className='profile-section'>
+                        <div className='decoration'>
+                            <div className='circle'></div>
+                        </div>
+                    </div>
                 </div>
             
                 <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='swipe-up' style={swipeUpStyle} onClick={() => {
                     handleNavbarHeight();
-                    navigate('/projects');
+                    navigate('/');
                 }}>
                     <FontAwesomeIcon icon={faArrowUpLong} />
-                    <span>Projects</span>
+                    <span>Navigate</span>
                 </button>
             </nav>
         </div>
