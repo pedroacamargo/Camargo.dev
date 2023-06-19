@@ -1,6 +1,6 @@
 import './App.scss'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar.component';
+import Navbar from './routes/navbar/Navbar.component';
 import Projects from './routes/Projects.component';
 
 function App() {
@@ -8,10 +8,7 @@ function App() {
     <Router>
       <main>
         <Navbar />
-        <br />
-        <br /> 
-        <br />
-        <br /> 
+
         <Routes>
           <Route path='/' element></Route>
           <Route path='/projects' element={<Projects />}></Route>

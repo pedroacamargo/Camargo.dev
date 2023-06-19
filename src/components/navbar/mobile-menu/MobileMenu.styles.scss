@@ -1,0 +1,44 @@
+.mobile-navbar {
+    height: 100%;
+    width: 80px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .menu-strip {
+        position: relative;
+        width: 30%;
+        height: 2px;
+        background-color: white;
+        margin: 3px;
+    }
+
+    span {
+        color: white;
+        font-size: .8em;
+        margin-top: 2px;
+        margin-bottom: -4px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .menu {
+        transition: 1s;
+        position: absolute;
+        left: -100vw;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        background-color: rgba(7, 7, 7, 0.815);
+
+
+    }
+}
+
+
+@media screen and (max-width: 799px) {
+    .mobile-navbar {
+        display: flex;
+    }
+}
