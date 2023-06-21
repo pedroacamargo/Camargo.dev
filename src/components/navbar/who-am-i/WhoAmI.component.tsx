@@ -7,7 +7,7 @@ const WhoAmI = () => {
     let word = "Front-end Developer."
     const wordDB = ['Front-end Developer.', 'Computer Scientist.']
     
-    const [profesion, setProfesion] = useState('Front-end Developer.')
+    const [profesion, setProfesion] = useState<string>('Front-end Developer.')
 
     let totalWaitTime = 60;
     let isIncreasing = false, wait = totalWaitTime, option = 0;
@@ -15,14 +15,14 @@ const WhoAmI = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            if (word.length != 0 && !isIncreasing) {
+            if (word.length !== 0 && !isIncreasing) {
                 word = word.slice(0,-1);
-            } else if (word.length == 0 || isIncreasing) {
+            } else if (word.length === 0 || isIncreasing) {
                 isIncreasing = true;
                 if (word.length < wordDB[option].length) {
                     word += wordDB[option][word.length];
                 } else {
-                    if (wait == 0){
+                    if (wait === 0){
                         isIncreasing = false;
                         wait = totalWaitTime;
                         option = option ? 0 : 1;

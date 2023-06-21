@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react';
+import { CSSProperties, useState } from 'react';
 import './Navbar.styles.scss'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpLong } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Balls from '../../components/navbar/balls/Balls.component';
 import NavbarLinks from '../../components/navbar/navbar-links/NavbarLinks.component';
 import MobileMenu from '../../components/navbar/mobile-menu/MobileMenu.component';
@@ -12,50 +11,50 @@ import ImageDecoration from '../../components/navbar/who-am-i/imagedecoration/Im
 
 
 const Navbar = () => {
-    const [isOpened, setIsOpened] = useState(true);
-    const [isHover, setIsHover] = useState(false);
+    const [isOpened, setIsOpened] = useState<boolean>(true);
+    const [isHover, setIsHover] = useState<boolean>(false);
     const navigate = useNavigate();
 
-    const bgSwipeUp = () => {
+    const bgSwipeUp = (): string => {
         return isHover ? 'black' : 'rgb(0,255,0)'
     }
 
-    const borderSwipeUp = () => {
+    const borderSwipeUp = (): string => {
         return isHover ? '1px solid white' : '1px solid rgb(0,255,0)'
     }
 
-    const bgColorSwipeUp = () => {
+    const bgColorSwipeUp = (): string => {
         return isHover ? 'white' : '' 
     }
 
-    const setNavbarBackground = () => {
+    const setNavbarBackground = (): string => {
         return isOpened ? 'black' : 'rgb(0,0,0,0.6)';
     }
 
-    const navbarStyle = {
+    const navbarStyle: CSSProperties = {
         height: isOpened ? '100vh' : '70px',
         backgroundColor: 'black',
         position: 'sticky'
     }
     /* */
     
-    const swipeUpStyle = {
-        top: isOpened ? 'calc(100vh - 100px)' : '70px',
+    const swipeUpStyle: CSSProperties = {
+        top: isOpened ? 'calc(100vh - 300px)' : '70px', // If want to change, go to the sass file
         color: bgSwipeUp(),
         border: borderSwipeUp(),
         backgroundColor: bgColorSwipeUp(),
     }
     
     // Functions
-    const handleNavbarHeight = () => {
+    const handleNavbarHeight = (): void => {
         setIsOpened(!isOpened);
     }
     
-    const handleMouseEnter = () => {
+    const handleMouseEnter = (): void => {
         setIsHover(!isHover);
     };
     
-    const handleMouseLeave = () => {
+    const handleMouseLeave = (): void => {
         setIsHover(!isHover);
     };
     

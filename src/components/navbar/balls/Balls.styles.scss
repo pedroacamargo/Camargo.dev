@@ -249,3 +249,9 @@ $colorBubbles: rgba(161, 31, 31, 0.664); // Change this in the javaScript code
         height: 300px;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .dec1, .dec2, .dec3, .dec4, .dec5, .dec6, .dec7, .dec8 {
+        animation: none;
+    }
+}
