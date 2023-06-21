@@ -1,6 +1,10 @@
 import './ImageDecoration.styles.scss'
 
-const ImageDecoration = (props) => {
+interface Props {
+    isOpened: boolean,
+}
+
+const ImageDecoration = (props: Props) => {
     return (
         <div className='profile-section'>
             <div style={{visibility: props.isOpened ? 'visible' : 'hidden'}} className='decoration'>
