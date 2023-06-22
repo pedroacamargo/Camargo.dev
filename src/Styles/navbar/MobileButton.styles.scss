@@ -1,0 +1,40 @@
+@import './Variables/Variables.styles.scss';
+
+.menu-btn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s;
+
+    .menu-strip {
+        position: relative;
+        width: 30px;
+        height: 2px;
+        background-color: $mobileMenuIconColor;
+        margin: 3px;
+    }
+
+    .strip1 {
+        transform-origin: 100%;
+    }
+
+    .strip3 {
+        transform-origin: -100%;
+    }
+
+    span {
+        color: $mobileMenuIconColor;
+        font-size: .8em;
+        margin-top: 2px;
+        margin-bottom: -4px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+}
+
+@media screen and (max-width: 799px) {
+    .menu-btn {
+        display: flex;
+    }
+}
