@@ -1,4 +1,4 @@
-import './WhoAmI.styles.scss'
+import '../../Styles/navbar/WhoAmI.styles.scss'
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'

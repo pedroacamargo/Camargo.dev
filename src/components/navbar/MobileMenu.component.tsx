@@ -1,4 +1,4 @@
-import './MobileMenu.styles.scss'
+import '../../Styles/navbar/MobileMenu.styles.scss'
 
 const MobileMenu = () => {
 

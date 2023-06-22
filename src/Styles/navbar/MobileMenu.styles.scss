@@ -1,3 +1,6 @@
+@import 'Variables/Variables.styles.scss';
+@import 'Variables/Mixin.styles.scss';
+
 .mobile-navbar {
     height: 100%;
     width: 80px;
@@ -10,12 +13,12 @@
         position: relative;
         width: 30%;
         height: 2px;
-        background-color: white;
+        background-color: $mobileMenuIconColor;
         margin: 3px;
     }
 
     span {
-        color: white;
+        color: $mobileMenuIconColor;
         font-size: .8em;
         margin-top: 2px;
         margin-bottom: -4px;
@@ -23,16 +26,13 @@
     }
 
     .menu {
-        transition: 1s;
+        @include size(100vw,100vh);
         position: absolute;
+        transition: 1s;
         left: -100vw;
         top: 0;
-        width: 100vw;
-        height: 100vh;
         z-index: 0;
-        background-color: rgba(7, 7, 7, 0.815);
-
-
+        background-color: $mobileOpenedMenuBackground;
     }
 }
 

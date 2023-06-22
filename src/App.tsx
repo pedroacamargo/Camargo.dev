@@ -1,6 +1,6 @@
-import './App.scss'
+import './Styles/navbar/App.scss'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './routes/navbar/Navbar.component';
+import Navbar from './routes/Navbar.component';
 import Projects from './routes/Projects.component';
 
 function App() {

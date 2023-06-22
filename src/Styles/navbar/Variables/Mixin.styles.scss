@@ -1,0 +1,18 @@
+/* General functions */
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+/* Balls functions */
+@mixin ball($width, $height, $top, $left, $name, $duration) {
+    width: $width;
+    height: $height;
+    top: $top;
+    left: $left;
+    animation-name: $name;
+    animation-timing-function: linear;
+    animation-duration: $duration;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}

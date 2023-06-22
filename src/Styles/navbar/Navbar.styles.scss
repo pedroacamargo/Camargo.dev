@@ -1,12 +1,11 @@
-$navOriginalHeight: 70px;
-$colorBubbles: rgba(235, 247, 255, 0.664);
-$colorNavbar: rgba(0, 0, 0, 0.918);
+@import 'Variables/Variables.styles.scss';
+@import 'Variables/Mixin.styles.scss';
 
 nav {
     background-color: black;
     border-bottom: 2px solid rgb(0, 0, 0);
     height: $navOriginalHeight;
-    position: fixed;
+    position: sticky;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -16,18 +15,17 @@ nav {
     transition: 1s;
 
     .navbar-container {
-        height: 70px;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 1);
+        @include size(100%, $navOriginalHeight);
+        background-color: $colorNavbar;
         display: flex;
         justify-content: space-around;
         align-items: center;
         z-index: 3;
 
         .logo {
-            color: white;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 1.7em;
+            color: $logoColor;
+            font-family: $logoFont;
+            font-size: $logoSize;
             cursor: pointer;
         }
     }
@@ -53,12 +51,12 @@ nav {
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: $navOriginalHeight;
+        top: 70px;
         transition: 1s;
         font-size: 1.4em;
         border-radius: 20px;
-        border: 1px solid rgb(0, 255, 0);
-        color: rgb(0, 255, 0);
+        border: 1px solid $colorSwipeUp;
+        color: $colorSwipeUp;
         padding: 10px;
         background-color: rgba(0, 0, 0, 0);
         cursor: pointer;
@@ -75,7 +73,7 @@ nav {
         }
 
         span {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: $fontCourier;
             margin-top: 10px;
             font-size: .5em;
         }

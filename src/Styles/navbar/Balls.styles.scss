@@ -1,0 +1,181 @@
+@import "Variables/Mixin.styles.scss";
+@import "Variables/Variables.styles.scss";
+
+.navbar-decoration {
+    background-color: $colorBubbles;
+    border-radius: 100%;
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+@keyframes moveball1 {
+    0% {
+        
+        top: 0;
+        left: 60%;
+    }
+
+    100% {
+        top: calc(100vh - 201px);
+        left: 75%;
+    }
+
+}
+
+@keyframes moveball2 {
+    0% {
+        top: 100px;
+        left: 0%;
+    }
+
+    50% {
+        top: 30vh;
+        left: calc(100% - 300px);
+    }
+
+    60% {
+        top: calc(100vh - 301px);
+        left: 70%;
+    }
+}
+
+@keyframes moveball3 {
+    0% {
+        top: 330px;
+        left: calc(100% - 250px);
+    }
+
+    100% {
+        top: 0px;
+        left: 0%;
+    }
+}
+
+@keyframes moveball4 {
+    0% {
+        top: 20px;
+        left: 10%;
+    }
+
+    100% {
+        top: 0px;
+        left: calc(100% - 100px);
+    }
+}
+
+@keyframes moveball5 {
+    0% {
+        top: 20px;
+        left: 82%;
+    }
+    
+    100% {
+        top: 0px;
+        left: 0;
+    }
+}
+
+@keyframes moveball6 {
+    0% {
+        top: 30vh;
+        left: 40%;
+    }
+    
+    100% {
+        top: calc(100vh - 150px);
+        left: 0;
+    }
+}
+
+@keyframes moveball7 {
+    0% {
+        top: calc(100vh - 200px);
+        left: 0%;
+    }
+    
+    100% {
+        top: calc(100vh - 200px);
+        left: calc(100% - 200px);
+    }
+}
+
+@keyframes moveball8 {
+    0% {
+        top: 20px;
+        left: 50%;
+    }
+    
+    100% {
+        top: 20px;
+        left: calc(100% - 200px);
+    }
+}
+
+.dec1 {
+    @include ball(200px, 200px, 0vh, 60%, moveball1, 160s);
+}
+
+.dec2 {
+    @include ball(300px, 300px, 100px, 0%, moveball2, 300s);
+}
+
+.dec3 {
+    @include ball(250px,250px,50px,80%,moveball3,182s);
+}
+
+.dec4 {
+    @include ball(100px,100px,20px,10%,moveball4,110s);
+}
+
+.dec5 {
+    @include ball(50px,50px,20px,82%,moveball5,150s);
+}
+
+.dec6 {
+    @include ball(150px,150px,50vh,50%,moveball6,154s);
+}
+
+.dec7 {
+    @include ball(150px,150px,calc(100vh - 200px),0%,moveball7,154s);
+}
+
+.dec8 {
+    @include ball(150px,150px,calc(100vh - 200px),50%,moveball8,154s);
+}
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+    .dec1 {
+        @include ball(500px,500px,0vh,60%,moveball1,160s);
+    }
+
+    .dec2 {
+        @include size(350px,350px);
+    }
+
+    .dec3 {
+        @include size(400px,400px);
+    }
+
+    .dec4 {
+        @include size(300px,300px);
+    }
+    
+    .dec5 {
+        @include size(150px,150px);
+    }
+
+    .dec6 {
+        @include size(300px,300px);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .dec1, .dec2, .dec3, .dec4, .dec5, .dec6, .dec7, .dec8 {
+        animation: none;
+    }
+}

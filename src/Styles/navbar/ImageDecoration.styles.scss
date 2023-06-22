@@ -1,3 +1,4 @@
+@import 'Variables/Mixin.styles.scss';
 
 .decoration {
     transition: 1s;
@@ -7,8 +8,7 @@
 
     border-radius: 0 15px 15px 0;
     
-    width: 500px;
-    height: 160px;
+    @include size(500px,160px);
     background-color: black;
     
     
@@ -31,12 +31,11 @@
 
 .circle {
     border: 3px solid black;
-    width: 400px;
-    height: 400px;
+    @include size(400px,400px);
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     animation: morph 7s ease-in-out infinite;
     
-    background-image: url(../../../../assets/OHOMEM.png);
+    background-image: url(../../assets/OHOMEM.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -46,10 +45,8 @@
         width: 400px;
 
         .circle {
-            width: 300px;
-            height: 300px;
+            @include size(300px,300px);
         }
-
     }
 }
 
@@ -59,8 +56,7 @@
 
         .circle {
             margin-left: -40px;
-            width: 250px;
-            height: 250px;
+            @include size(250px,250px);
         }
 
     }
@@ -89,8 +85,7 @@
         border-radius: 20px 0 0 20px;
 
         .circle {
-            width: 200px;
-            height: 200px;
+            @include size(200px,200px);
             transform: rotate(-90deg);
             margin-right: -60px;
         }

@@ -1,12 +1,14 @@
+@import 'Variables/Variables.styles.scss';
+
 .navbar-links {
     box-sizing: content-box;
     z-index: 2;
     
     .navbar-link {
-        font-family: 'Raleway', sans-serif;
+        font-family: $fontRaleway;
         position: relative;
         padding: 25px 30px;
-        color: white;
+        color: $navLinkColor;
         font-weight: bold;
         
         &::after {
@@ -18,13 +20,12 @@
             width: 0%;
             height: 2px;
             border-radius: 20px;
-            background-color: red;
+            background-color: $navLinkColorOnHover;
         }
         
         &:hover {
             font-weight: bold;
-
-            color: red;
+            color: $navLinkColorOnHover;
         }
 
         &:hover::after {
@@ -32,6 +33,7 @@
         }
 
     }
+    
     .active {
         color: rgb(0, 225, 255);
     

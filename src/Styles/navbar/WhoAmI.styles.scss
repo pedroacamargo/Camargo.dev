@@ -1,3 +1,5 @@
+@import 'Variables/Variables.styles.scss';
+
 .profile-section {
     display: flex;
     justify-content: center;
@@ -12,13 +14,13 @@
 
         border-radius: 10px;
         padding: 20px 10px 30px 20px;
-        background-color: black;
+        background-color: rgb(0, 0, 0);
         height: 160px;
         cursor: default;
 
         span {
             color: rgb(204, 192, 192);
-            font-family: 'Open Sans', sans-serif;
+            font-family: $fontOpenSans;
             font-size: 1.1em;
             padding: 0px 11px;
             font-weight: 700;
@@ -37,8 +39,8 @@
         }
 
         h1 {
-            background-color: #ee2424;
-            background-image: linear-gradient(45deg, rgb(251, 255, 0), #ee2424);
+            background-color: $backupColorMainName;
+            background-image: linear-gradient(45deg, $gradientLeftMainName, $gradientRightMainName);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; 
             -moz-background-clip: text;
@@ -46,7 +48,7 @@
             background-size: 100%;
             background-position: left;
             background-repeat: repeat;
-            font-family: 'Raleway', sans-serif;
+            font-family: $fontMainName;
             font-size: 3em;
             padding: 0px 10px;
             font-weight: bold;
@@ -55,8 +57,8 @@
 
         .subtitle {
             position: relative;
-            background-color: #ee2424;
-            background-image: linear-gradient(90deg,  #eb4c4c,rgb(251, 255, 0));
+            background-color: $backupColorSubtitle;
+            background-image: linear-gradient(90deg,  $gradientLeftSubtitle, $gradientRightSubtitle);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; 
             -moz-background-clip: text;
@@ -65,7 +67,7 @@
             background-position: left;
             background-repeat: repeat;
             font-size: 1.5em;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: $fontSubtitle;
             font-weight: lighter;
             padding: 10px 10px;
 

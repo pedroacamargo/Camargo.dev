@@ -1,0 +1,36 @@
+/* Colors */
+$colorBubbles: rgba(161, 31, 31, 0.664); // landing bubbles
+$colorGreen: rgb(0, 255, 0);
+$colorRed: #ee2424;
+$colorYellow: rgb(251, 255, 0);
+
+/* Fonts */
+$fontCourier: 'Courier New', Courier, monospace;
+$fontRaleway: 'Raleway', sans-serif;
+$fontOpenSans: 'Open Sans', sans-serif;
+
+/* MobileMenu */
+$mobileMenuIconColor: rgb(218, 208, 208); // mobile icon to open the menu
+$mobileOpenedMenuBackground: rgba(7, 7, 7, 0.815); // Mobile menu opened background
+
+/* Navbar */
+$navOriginalHeight: 70px;
+$colorNavbar: rgba(0, 0, 0, 0.6);
+$logoFont: 'Share Tech Mono', monospace;
+$logoColor: white;
+$logoSize: 1.7em;
+$colorSwipeUp: $colorGreen;
+
+/* Navbar Links */
+$navLinkColor: white;
+$navLinkColorOnHover: red;
+
+/* Profile section */
+$backupColorMainName: $colorRed; // Pedro Augusto Camargo
+$fontMainName: $fontRaleway;
+$gradientLeftMainName: $colorYellow;
+$gradientRightMainName: $colorRed;
+$backupColorSubtitle: $colorRed; // Computer Scientist | Front-end Developer
+$fontSubtitle: $fontCourier;
+$gradientLeftSubtitle: $colorRed;
+$gradientRightSubtitle: $colorYellow;

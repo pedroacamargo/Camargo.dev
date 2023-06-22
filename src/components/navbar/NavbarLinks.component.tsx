@@ -1,4 +1,4 @@
-import './NavbarLinks.styles.scss'
+import '../../Styles/navbar/NavbarLinks.styles.scss'
 import { Link } from 'react-router-dom';
 
 interface Props {
