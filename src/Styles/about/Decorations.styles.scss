@@ -1,0 +1,94 @@
+@import '../navbar/Variables/Variables.styles.scss';
+@import 'Variables/Variables.styles.scss';
+
+.section-name {
+    color: rgba(255, 255, 255, 0.733);
+    font-size: 3em;
+    position: absolute;
+    top: 70px;
+    margin-left: -100px;
+    font-family: $fontABout;
+    //font-weight: 600;
+    text-shadow: 100px -60px 0px rgba(196, 17, 17, 0.164);
+}
+
+
+.stand {
+    width: 3px;
+    height: 50%;
+    background-color: rgba(255, 0, 0, 0.199);
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    z-index: -10;
+    &::after {
+        content: '';
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        left: -8px;
+        z-index: 10;
+        background-color: rgba(255, 0, 0, 0.295);
+        filter: blur(10px);
+    }
+}
+
+.sright {
+    left: calc(100vw - 83px);
+}
+
+.lamp {
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(-30deg);
+        }
+        50% {
+            transform: rotate(40deg);
+        }
+        100% {
+            transform: rotate(-30deg);
+        }
+    }
+
+    animation: rotate 10s infinite;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(255, 0, 0, 0.527);
+    position: absolute;
+    left: 100px;
+    border-radius: 100% 0 0 100%;
+    transition: 1s;
+    z-index: 10;
+    transform: rotate(-10deg);
+    &::after {
+        content: '';
+        width: 100px;
+        height: 30px;
+        background-color: rgba(255, 0, 0, 0.253);
+        background-image: linear-gradient(rgba(255, 0, 0, 0.432), rgba(255, 0, 0, 0));
+        position: absolute;
+        top: -5px;
+        left: -10px;
+        transform: perspective(1.9em) rotateY(-30deg) scale(.9);
+        filter: blur(13px);
+    }
+}
+
+.lright {
+    @keyframes rotate2 {
+        0% {
+            transform: rotate(-200deg);
+        }
+        50% {
+            transform: rotate(-140deg);
+        }
+        100% {
+            transform: rotate(-200deg);
+        }
+    }
+
+    left: calc(100vw - 100px);
+    animation: rotate2 10s infinite;
+
+}

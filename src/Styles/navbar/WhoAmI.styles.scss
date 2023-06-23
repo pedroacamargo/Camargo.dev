@@ -179,64 +179,7 @@
             }
 
         }
-
-        .socials-container {
-            position: relative;
-            top: -5px;
-            border: 1px solid #ee2424;
-            padding-right: 10px;
-            
-            .social-btn {
-                background-color: black;
-                color: white;
-                font-size: 1.3em;
-                border: 1px solid red;
-                border-radius: 10px;
-                margin-left: 10px;
-                padding: 10px;
-                
-                &:hover {
-                    background-color: white;
-                    color: black;
-                    border: 1px solid black;
-                }
-            }
-            
-
-            &::after {
-
-                @keyframes blinkBlur {
-                    0% {
-                        display: block;
-                    }
-
-                    50% {
-                        display: none;
-                    }
-
-                    100% {
-                        display: block;
-                    }
-                }
-
-                content: '';
-                width: 180px;
-                height: 25px;
-                z-index: -1;
-                background-color: rgba(255, 0, 0, 0.753);
-                position: absolute;
-                left: 0px;
-                top: 0px;
-                filter: blur(1.4em);
-                animation-name: blinkBlur;
-                animation-timing-function: linear;
-                animation-duration: 1s;
-                animation-direction: alternate;
-                animation-iteration-count: infinite;
-            }
-        }
     }
-
 }
 
 @media screen and (min-width: 1000px) {
