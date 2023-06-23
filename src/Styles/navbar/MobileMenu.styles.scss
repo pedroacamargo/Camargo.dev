@@ -3,39 +3,40 @@
 
 .mobile-navbar {
     height: 100%;
-    width: 80px;
+    width: 100px;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    .menu-strip {
-        position: relative;
-        width: 30%;
-        height: 2px;
-        background-color: $mobileMenuIconColor;
-        margin: 3px;
-    }
-
-    span {
-        color: $mobileMenuIconColor;
-        font-size: .8em;
-        margin-top: 2px;
-        margin-bottom: -4px;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
     .menu {
-        @include size(100vw,100vh);
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-top: $navOriginalHeight;
+        @include size(70vw,100vh);
         position: absolute;
         transition: 1s;
-        left: -100vw;
+        left: -150vw;
         top: 0;
-        z-index: 0;
         background-color: $mobileOpenedMenuBackground;
+
+        .mobile-navbar-link {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-family: $fontCourier;
+            background-image: linear-gradient(to right, black 75%, rgb(161, 8, 8));
+            border-bottom: 1px solid rgb(161, 8, 8);
+
+
+            &:first-child {
+                border-top: 1px solid rgb(161, 8, 8);
+            }
+        }
+
     }
 }
-
 
 @media screen and (max-width: 799px) {
     .mobile-navbar {
