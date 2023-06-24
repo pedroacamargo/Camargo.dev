@@ -2,14 +2,23 @@
 @import 'Variables/Variables.styles.scss';
 
 .section-name {
-    color: rgba(255, 255, 255, 0.733);
+    color: rgba(211, 226, 9, 0.904);
     font-size: 3em;
     position: absolute;
-    top: 70px;
-    margin-left: -100px;
+    margin-left: 300px;
+    top: 20px;
     font-family: $fontABout;
     //font-weight: 600;
-    text-shadow: 100px -60px 0px rgba(196, 17, 17, 0.164);
+    &::after {
+        content: '?ABOUT!';
+        font-size: 2em;
+        position: relative;
+        z-index: -2;
+        top: -20px;
+        left: -50%;
+        color: rgba(196, 17, 17, 0.123);
+
+    }
 }
 
 

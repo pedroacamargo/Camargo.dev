@@ -1,9 +1,50 @@
+@import 'Variables/Variables.styles.scss';
+
 .aboutme-container {
-    z-index: 10;
-    height: 400px;
     width: 80%;
-    max-width: 800px;
-    box-shadow: 2px 2px 50px rgba(255, 0, 0, 0.137);
+    max-width: 900px;
+    box-shadow: 2px 2px 50px rgba(255, 0, 0, 0.288);
     border-radius: 15px;
     background-color: rgb(3, 0, 0);
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        padding: 20px;
+        line-height: 1.25em;
+        text-align: justify;
+        flex: 1;
+        font-size: 1.2em;
+        color: white;
+        font-family: $fontABout;
+    }
+    
+    div {
+
+
+        @keyframes clipRotation {
+            0% {
+                clip-path: polygon(0% 9%, 90% 7%, 89% 89%, 7% 90%);
+            }
+            50% {
+                clip-path: polygon(30% 7%, 100% 24%, 69% 100%, 4% 76%);
+            }
+            100% {
+                clip-path: polygon(45% 0%, 100% 40%, 50% 100%, 0% 57%);
+            }
+        }
+
+        flex: 1;
+        height: 400px;
+        margin: 10px;
+        margin-left: 30px;
+        background-image: url(../../assets/trajado.png);
+        background-position: center;
+        background-size: cover;
+        clip-path: polygon(0% 9%, 90% 7%, 89% 89%, 7% 90%);
+        animation: clipRotation 10s infinite linear alternate;
+    }
 }
