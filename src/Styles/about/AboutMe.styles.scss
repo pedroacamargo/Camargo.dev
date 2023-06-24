@@ -11,8 +11,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    
 
     p {
+        z-index: 1;
         padding: 20px;
         line-height: 1.25em;
         text-align: justify;
@@ -22,6 +26,7 @@
         font-family: $fontABout;
     }
     
+
     div {
 
 
@@ -37,6 +42,7 @@
             }
         }
 
+        z-index: 1;
         flex: 1;
         height: 400px;
         margin: 10px;
@@ -46,5 +52,49 @@
         background-size: cover;
         clip-path: polygon(0% 9%, 90% 7%, 89% 89%, 7% 90%);
         animation: clipRotation 10s infinite linear alternate;
+    }
+
+    .border {
+        &::before {
+            @keyframes rotate3 {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes ballblinking {
+                0% {
+                    background-color: rgba(201, 26, 26, 0.623);
+                }
+                100% {
+                    background-color: rgb(21, 21, 206);
+                }
+            }
+
+            content: '';
+            width: 200%;
+            height: 200px;
+            background-color: rgba(228, 243, 11, 0.719);
+            filter: blur(100px);
+            position: absolute;
+            left: -50%;
+            top: calc(50% - 50px);
+            transition: 1s;
+            transform: rotate(0deg);
+            animation: rotate3 10s infinite linear, ballblinking 1s infinite linear alternate;
+        }
+
+        &::after {
+            content: '';
+            width: 98%;
+            height: 98%;
+            background-color: rgb(0, 0, 0);
+            left: 1%;
+            top: 1%;
+            position: absolute;
+        }
     }
 }

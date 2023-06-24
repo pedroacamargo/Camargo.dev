@@ -1,6 +1,83 @@
 @import '../navbar/Variables/Variables.styles.scss';
 @import 'Variables/Variables.styles.scss';
 
+.ballblinking {
+    position: absolute;
+    border-radius: 100%;
+    top: 50%;
+    left: -300px;
+    filter: blur(60px);
+    width: 100px;
+    height: 100px;
+    background-color: rgb(207, 18, 18);
+    
+    @keyframes ballblinking {
+        0% {
+            background-color: rgb(245, 8, 8);
+        }
+        100% {
+            background-color: blue;
+        }
+    }
+
+    @keyframes movement {
+        0% {
+            left: -300px;
+            top: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        100% {
+            left: 50%;
+            top: calc(105%);
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    animation: ballblinking .2s infinite linear alternate, movement 10s infinite linear;
+}
+
+.police1 {
+    animation-delay: 1s;
+    animation: ballblinking .1.3s infinite linear alternate, movement 9s infinite linear;
+}
+
+.police2 {
+    animation-delay: 3s;
+    animation: ballblinking .1s infinite linear alternate, movement 9.4s infinite linear;
+}
+
+.police3 {
+    animation-delay: 5s;
+    animation: ballblinking .1.5s infinite linear alternate, movement 9.3s infinite linear;
+}
+
+.police4 {
+    @keyframes movement6 {
+        0% {
+            left: 50%;
+            top: 120%;
+            width: 150px;
+            height: 150px;
+        }
+        90% {
+            width: 100px;
+            height: 100px;
+            
+        }
+        100% {
+            left: 100%;
+            top: 50%;
+        }
+    }
+    animation: ballblinking .1s infinite linear alternate, movement6 7s infinite linear;
+}
+
+.police5 {
+    animation-delay: 2s;
+}
+
 .section-name {
     color: rgba(211, 226, 9, 0.904);
     font-size: 3em;
