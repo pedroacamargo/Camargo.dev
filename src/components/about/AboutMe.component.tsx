@@ -43,6 +43,11 @@ export const AboutMe = () => {
 
                 <div className='danger'>&#x26A0;</div>
 
+                <div className='strip'></div>
+                <div className='about-mobile-img'></div>
+                <div className='danger danger2'>&#x26A0;</div>
+                <div className='danger danger3'>&#x26A0;</div>
+
             </div>
         </>
     )
