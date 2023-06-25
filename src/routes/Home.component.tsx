@@ -4,11 +4,11 @@ import Contact from "./Contact.component";
 
 const Home = () => {
     return (
-        <main>
+        <>
             <About />
             <Projects />
             <Contact />
-        </main>
+        </>
     );
 }
 

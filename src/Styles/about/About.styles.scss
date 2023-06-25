@@ -9,7 +9,13 @@ section.about-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: -1;
+    z-index: 1;
     position: relative;
     overflow: hidden;
+}
+
+@media screen and (max-width: 800px) {
+    section.about-container {
+        padding-top: 50px;
+    }
 }

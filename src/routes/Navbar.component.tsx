@@ -36,7 +36,7 @@ const Navbar = () => {
 
 
     return (
-        <div style={{position: 'fixed', width: '100%'}}>
+        <div style={{position: 'fixed', width: '100%', zIndex: '60'}}>
             <nav style={navbarStyle}>
                 <Balls />
 
