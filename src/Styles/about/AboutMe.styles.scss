@@ -171,7 +171,7 @@
     position: relative;
     
     h1 {
-        //@include gradientText($backupColorMainName, $gradientLeftMainName, $gradientRightMainName, $fontABout, 2em);
+        @include gradientText($backupColorMainName, $gradientLeftMainName, $gradientRightMainName, $fontABout, 2em);
         color: yellow;
         font-family: $fontABout;
         padding-top: 5px;
