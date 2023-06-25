@@ -4,6 +4,11 @@ import '../../Styles/about/Decorations.styles.scss';
 export const Decorations = () => {
     return (
         <>
+            <div className='ballblinking police1'></div>
+            <div className='ballblinking police2'></div>
+            <div className='ballblinking police3'></div>
+            <div className='ballblinking police4'></div>
+            <div className='ballblinking police5 police4'></div>
             <span className='section-name'>ABOUT</span>
             <div className='stand sright'></div>
             <div className='stand'></div>
