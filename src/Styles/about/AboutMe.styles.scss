@@ -122,3 +122,39 @@
         }
     }
 }
+
+
+@media screen and (max-width: 1000px) {
+    .whoami-container {
+        .aboutme-container {
+            font-size: .9em;
+            padding: 10px;
+            width: 400px;
+        }
+
+        .img-about-container {
+            .img-about {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .whoami-container {
+        flex-direction: column;
+        .aboutme-container {
+            width: 600px;
+            margin-bottom: 20px;
+            padding: 10px;
+            .border-container {
+                display: none;
+            }
+        }
+
+        .img-about-container {
+            display: none;
+        }
+    }
+}

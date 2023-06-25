@@ -9,7 +9,7 @@ interface Props {
 const NavbarLinks = (props: Props) => {
     return (
         <div className='navbar-links'>
-            <Link className='navbar-link' to='/' onClick={props.handleNavbarHeight}> Home </Link>
+            <Link className='navbar-link' to='/'> Home </Link>
             <Link className='navbar-link' to='/about'> About </Link>
             <Link className='navbar-link' to='/projects' onClick={() => {
                 props.setIsOpened(false);

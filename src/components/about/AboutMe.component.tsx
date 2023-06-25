@@ -11,6 +11,11 @@ export const AboutMe = () => {
                         <span className='border'></span>
                         <span className='border'></span>
                     </div>
+
+                    <div>
+                        
+                    </div>
+
                 </div>
                 <div className='img-about-container'>
                     <div className="img-about"></div>
