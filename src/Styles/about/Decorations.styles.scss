@@ -3,6 +3,7 @@
 
 .ballblinking {
     position: absolute;
+    z-index: -2;
     border-radius: 100%;
     top: 50%;
     left: -300px;
@@ -207,7 +208,7 @@
 }
 
 @media screen and (max-width: 800px) {
-    .ballblinking, .police1, .police2, .police3, .police4, .police5 {
+    .ballblinking, .police1, .police2, .police3, .police4, .police5, .section-name-container {
         display: none;
     }
 }

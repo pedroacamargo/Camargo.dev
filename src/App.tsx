@@ -6,7 +6,7 @@ import About from './routes/About.component';
 import Contact from './routes/Contact.component';
 import Home from './routes/Home.component';
 import { Spacer } from './components/Spacer.component';
-import { Footer } from './components/Footer.componen';
+import { Footer } from './components/Footer.component';
 
 
 function App() {

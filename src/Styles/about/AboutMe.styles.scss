@@ -1,4 +1,6 @@
 @import 'Variables/Variables.styles.scss';
+@import '../navbar/Variables/Variables.styles.scss';
+@import 'Variables/Mixin.styles.scss';
 
 .whoami-container {
     display: flex;
@@ -25,6 +27,13 @@
             width: 100%;
             height: 100%;
             
+            h1 {
+                @include gradientText($backupColorMainName, $gradientLeftMainName, $gradientRightMainName, $fontABout, 2em);
+                z-index: 10;
+                position: relative;
+                padding-left: 20px;
+            }
+
             p {
                 position: relative;
                 z-index: 10;
@@ -32,9 +41,35 @@
                 line-height: 1.25em;
                 text-align: justify;
                 flex: 1;
-                font-size: 1.2em;
+                font-size: 1.1em;
                 color: white;
                 font-family: $fontABout;
+            }
+
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                padding-left: 10px;
+
+                .github-btn {
+                    animation: none;
+                    color: white;
+                    border: 1px solid white;
+                    transition: .5s;
+                    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.589);
+        
+                    &:active {
+                        background-color: white;
+                        color: black;
+                    }
+                
+                    &:hover {
+                        background-color: white;
+                        color: black;
+                    }
+                }
             }
                 
             .border {
@@ -87,7 +122,7 @@
     .img-about-container {
         position: relative;
         background-color: black;
-        box-shadow: 2px 2px 50px rgba(255, 0, 0, 0.288);
+        box-shadow: inset 2px 2px 20px rgba(255, 0, 0, 0.288);
         border-radius: 10px;
         padding: 20px;
         margin-left: -20px;
@@ -123,12 +158,81 @@
     }
 }
 
+.whoami-container-mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 30px rgba(255, 0, 0, 0.452);
+    position: relative;
+    
+    h1 {
+        //@include gradientText($backupColorMainName, $gradientLeftMainName, $gradientRightMainName, $fontABout, 2em);
+        color: yellow;
+        font-family: $fontABout;
+        padding-top: 5px;
+        font-size: 1.8em;
+    }
+
+    .btn-container {
+        padding-bottom: 30px;
+
+        .github-btn {
+            animation: none;
+            color: white;
+            border: 1px solid white;
+            transition: 1s;
+            box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.589);
+
+            &:active {
+                background-color: white;
+                color: black;
+            }
+        
+            &:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+        
+    p {
+        font-family: $fontOpenSans;
+        color: rgb(214, 214, 220);
+        padding: 20px;
+        font-size: 1em;
+        text-align: justify;
+        z-index: 1;
+
+        span {
+            line-height: 3.5em;
+            font-size: 1em;
+            color: rgb(156, 51, 51);
+            font-weight: 600;
+        }
+    }
+
+    .danger {
+        color: rgba(255, 255, 0, 0.185);
+        display: block;
+        position: absolute;
+        z-index: 0;
+        font-size: 10em;
+    }
+}
+
 
 @media screen and (max-width: 1000px) {
     .whoami-container {
         .aboutme-container {
             font-size: .9em;
             padding: 10px;
+            padding-top: 30px;
+            padding-bottom: 20px;
             width: 400px;
         }
 
@@ -143,18 +247,23 @@
 
 @media screen and (max-width: 800px) {
     .whoami-container {
-        flex-direction: column;
-        .aboutme-container {
-            width: 600px;
-            margin-bottom: 20px;
-            padding: 10px;
-            .border-container {
-                display: none;
-            }
-        }
+        display: none;
+    }
 
-        .img-about-container {
-            display: none;
+    .whoami-container-mobile {
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 520px) {
+    .whoami-container-mobile {
+        width: 370px;
+
+        p {
+            span {
+                font-size: .7em;
+            }
         }
     }
 }

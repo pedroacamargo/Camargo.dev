@@ -1,0 +1,16 @@
+@mixin gradientText($backupColor, $gradientLeft, $gradientRight, $font, $size) {
+    background-color: $backupColor;
+    background-image: linear-gradient(45deg, $gradientLeft, $gradientRight);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-size: 100%;
+    background-position: left;
+    background-repeat: repeat;
+    font-family: $font;
+    font-size: $size;
+    padding: 0px 10px;
+    font-weight: bold;
+    animation: textGradient 1s ease-in alternate infinite;
+}
