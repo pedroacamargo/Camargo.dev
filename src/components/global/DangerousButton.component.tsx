@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/DangerousButton.scss'
+import '../../Styles/DangerousButton.scss'
 import { Link } from 'react-router-dom';
 
 interface Props {
