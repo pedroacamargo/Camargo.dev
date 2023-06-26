@@ -2,7 +2,7 @@
 
 section.about-container {
     width: 100%;
-    padding-top: 150px;
+    padding-top: 230px;
     padding-bottom: 150px;
     background-color: $backgroundColorAbout;
     display: flex;
@@ -16,7 +16,7 @@ section.about-container {
 
 @media screen and (max-width: 800px) {
     section.about-container {
-        padding-top: 50px;
+        padding-top: 100px;
         padding-bottom: 280px;
     }
 }

@@ -28,62 +28,11 @@ nav {
             cursor: pointer;
         }
     }
-
-
-    .profile-container {
-        width: 75vw;
-        height: 60vh;
-        position: absolute;
-        top: 15%;
-        display: flex;
-        justify-content: center;
-    }
-
-    @keyframes bounce {
-        0% {top: calc(100vh - 170px); font-size: 1.5em;}
-        100% {top: calc(100vh - 150px); font-size: 1.5em;}
-    }
-
-    .swipe-up {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 70px;
-        transition: 1s;
-        font-size: 1.4em;
-        border-radius: 20px;
-        border: 1px solid $colorSwipeUp;
-        color: $colorSwipeUp;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0);
-        cursor: pointer;
-        animation-name: bounce;
-        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-        animation-duration: 1s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-
-        &:hover {
-            color: black;
-            background-color: white;
-            border: 1px solid white;
-        }
-
-        span {
-            font-family: $fontCourier;
-            margin-top: 10px;
-            font-size: .5em;
-        }
-    }
-
 }
 
 
 @media screen and (max-width: 799px) {
     nav {
-
         .navbar-container {
             justify-content: space-around;
 
@@ -91,19 +40,5 @@ nav {
                 font-size: 1.5em;
             }
         }
-
-        .profile-container {
-            flex-direction: column-reverse;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-} 
-
-@media screen and (max-width: 450px) {
-    nav .profile-container {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
     }
 }
