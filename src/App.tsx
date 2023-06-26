@@ -5,8 +5,8 @@ import Projects from './routes/Projects.component';
 import About from './routes/About.component';
 import Contact from './routes/Contact.component';
 import Home from './routes/Home.component';
-import { Spacer } from './components/Spacer.component';
-import { Footer } from './components/Footer.component';
+import { Spacer } from './components/global/Spacer.component';
+import { Footer } from './components/global/Footer.component';
 
 
 function App() {
