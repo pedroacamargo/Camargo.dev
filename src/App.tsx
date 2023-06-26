@@ -7,15 +7,28 @@ import Contact from './routes/Contact.component';
 import Home from './routes/Home.component';
 import { Spacer } from './components/global/Spacer.component';
 import { Footer } from './components/global/Footer.component';
+import particlesOptions from './configs/particles.json';
+import type { Engine } from 'tsparticles-engine';
+import Particles from 'react-particles';
+import { ISourceOptions } from 'tsparticles-engine';
+import { loadFull } from 'tsparticles';
+import { useCallback } from 'react';
+
 
 
 function App() {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
+}, []);
+
   return (
     <Router>
+      <Particles options={particlesOptions as ISourceOptions} init={particlesInit}/>
       <Navbar />
       <Spacer />
       <Routes>
         <Route path='/' element={<Home />} ></Route>
+        <Route path='/landing' element></Route>
         <Route path='/about' element={<About />} ></Route>
         <Route path='/projects' element={<Projects />} ></Route>
         <Route path='/contact' element={<Contact />} ></Route>

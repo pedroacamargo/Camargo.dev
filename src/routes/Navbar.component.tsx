@@ -38,7 +38,6 @@ const Navbar = () => {
     return (
         <div style={{position: 'fixed', width: '100%', zIndex: '60'}}>
             <nav style={navbarStyle}>
-                <Balls />
 
                 <div className="navbar-container" style={{
                     backgroundColor: isOpened ? 'black' : '',
@@ -48,10 +47,7 @@ const Navbar = () => {
                     <MobileButton isMobileMenuOpened={isMobileMenuOpened} handleMenu={handleMenu}/>
                 </div>
 
-                <div className='profile-container'>
-                    <WhoAmI />
-                    <ImageDecoration isOpened={isOpened}/>
-                </div>
+                
             
                 <button className='swipe-up' style={swipeUpStyle} onClick={() => {
                     handleNavbarHeight();
