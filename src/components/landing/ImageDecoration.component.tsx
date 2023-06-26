@@ -1,4 +1,4 @@
-import '../../Styles/navbar/ImageDecoration.styles.scss'
+import '../../Styles/landing/ImageDecoration.styles.scss'
 
 interface Props {
     isOpened: boolean,

@@ -1,4 +1,4 @@
-import '../../Styles/navbar/Balls.styles.scss'
+import '../../Styles/landing/Balls.styles.scss'
 
 const Balls = () => {
     return (

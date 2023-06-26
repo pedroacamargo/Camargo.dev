@@ -1,8 +1,8 @@
 import React, {useContext} from 'react'
-import { LinksContext } from '../../utils/contexts/socialLinks.context'
+import { LinksContext } from '../utils/contexts/socialLinks.context'
 import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import '../../Styles/navbar/Socials.styles.scss'
+import '../Styles/Socials.styles.scss'
 
 export const Socials = () => {
     const { github, instagram, linkedin } = useContext(LinksContext);
