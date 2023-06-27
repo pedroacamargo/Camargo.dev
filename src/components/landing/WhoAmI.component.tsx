@@ -1,6 +1,6 @@
-import '../../Styles/navbar/WhoAmI.styles.scss'
+import '../../Styles/landing/WhoAmI.styles.scss'
 import { useState, useEffect } from 'react'
-import { Socials } from './Socials.component'
+import { Socials } from '../Socials.component'
 
 const WhoAmI = () => {
     let word = "Front-end Developer."
