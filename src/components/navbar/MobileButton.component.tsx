@@ -4,6 +4,8 @@ export const MobileButton = (props: any) => {
 
     
     
+
+    
     const stripState1 = {
         transform: props.isMobileMenuOpened ? 'rotate(45deg)' : '',
         left: props.isMobileMenuOpened ? '-4px' : '0',
