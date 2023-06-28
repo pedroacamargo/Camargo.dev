@@ -180,6 +180,60 @@
 
         }
     }
+
+    .explore-btn {
+        background-color: transparent;
+        padding: 10px 20px;
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        position: absolute;
+        left: calc(40%);
+        top: 100%;
+        font-family: $fontSubtitle;
+        font-size: 2em;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+
+        &::after {
+            content: "<";
+            position: absolute;
+            top: 25%;
+            left: 105%;
+            @keyframes bouncearrows1 {
+                0% {
+                    left: 105%;
+                }
+
+                100% {
+                    left: 125%;
+                }
+            }
+            animation: bouncearrows1 1s ease-in-out infinite alternate;
+        }
+        &::before {
+            content: ">";
+            position: absolute;
+            top: 25%;
+            left: -20%;
+            @keyframes bouncearrows2 {
+                0% {
+                    left: -20%;
+                }
+
+                100% {
+                    left: -40%;
+                }
+            }
+
+            animation: bouncearrows2 1s ease-in-out infinite alternate;
+        }
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
 }
 
 @media screen and (min-width: 1000px) {
