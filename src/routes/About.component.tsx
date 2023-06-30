@@ -3,6 +3,7 @@ import '../Styles/about/About.styles.scss';
 import { Decorations } from '../components/about/Decorations.component';
 import { AboutMeDesktop } from '../components/about/AboutMeDesktop.component';
 import { AboutMeMobile } from '../components/about/AboutMeMobile.component';
+import { TransitionAbout } from '../components/about/TransitionAbout.component';
 
 const About = () => {
     return (
@@ -11,6 +12,7 @@ const About = () => {
                 <Decorations />
                 <AboutMeDesktop />
                 <AboutMeMobile/>
+                <TransitionAbout />
             </section>
         </>
     )

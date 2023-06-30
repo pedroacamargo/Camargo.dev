@@ -1,0 +1,94 @@
+{
+    "projects": [
+        {
+            "title": "Portfolio",
+            "subtitle": "Website",
+            "background": "./assets/portfoliowebsite.png",
+            "technologies": [
+                {
+                    "value": "./assets/typescript.png"
+                },
+                {
+                    "value": "./assets/react.png"
+                },
+                {
+                    "value": "./assets/sass.png"
+                }
+            ] 
+        },
+        {
+            "title": "Ediwaves",
+            "subtitle": "Website",
+            "background": "./assets/ediwaveswebsite.png",
+            "technologies": [
+                {
+                    "value": "./assets/htmllogo.svg"
+                },
+                {
+                    "value": "./assets/csslogo.png"
+                },
+                {
+                    "value": "./assets/javascriptlogo.png"
+                }
+            ] 
+        },
+        {
+            "title": "Spotify clone",
+            "subtitle": "Website",
+            "background": "./assets/spotifyclone.png",
+            "technologies": [
+                {
+                    "value": "./assets/htmllogo.svg"
+                },
+                {
+                    "value": "./assets/javascriptlogo.png"
+                },
+                {
+                    "value": "./assets/bootstraplogo.png"
+                }
+            ] 
+        },
+        {
+            "title": "Pomopedro",
+            "subtitle": "App",
+            "background": "./assets/pomopedro.png",
+            "technologies": [
+                {
+                    "value": "./assets/htmllogo.svg"
+                },
+                {
+                    "value": "./assets/csslogo.png"
+                },
+                {
+                    "value": "./assets/javascriptlogo.png"
+                }
+            ] 
+        },
+        {
+            "title": "Typing",
+            "subtitle": "JavaScript Game",
+            "background": "./assets/typinggame.png",
+            "technologies": [
+                {
+                    "value": "./assets/htmllogo.svg"
+                },
+                {
+                    "value": "./assets/csslogo.png"
+                },
+                {
+                    "value": "./assets/javascriptlogo.png"
+                }
+            ] 
+        },
+        {
+            "title": "Donut Hunt",
+            "subtitle": "Ascii based game",
+            "background": "./assets/donuthunt.png",
+            "technologies": [
+                {
+                    "value": "./assets/C_Logo.png"
+                }
+            ] 
+        }
+    ]
+}
