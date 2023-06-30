@@ -2,7 +2,7 @@
     "autoPlay": true,
     "background": {
       "color": {
-        "value": "#000"
+        "value": "#030403"
       },
       "image": "",
       "position": "",
@@ -103,10 +103,10 @@
           "quantity": 2
         },
         "repulse": {
-          "distance": 70,
+          "distance": 200,
           "duration": 100,
           "factor": 100,
-          "speed": 1,
+          "speed": 0.1,
           "maxSpeed": 50,
           "easing": "ease-out-quad",
           "divs": {
@@ -129,7 +129,7 @@
           "quantity": 5,
           "particles": {
             "color": {
-              "value": "#ff0000",
+              "value": "#2596be",
               "animation": {
                 "enable": true,
                 "speed": 400,
@@ -165,17 +165,17 @@
           "area": {
             "gradient": {
               "start": {
-                "value": "#ffffff"
+                "value": "#d6281d"
               },
               "stop": {
-                "value": "#000000"
+                "value": "#d6281d"
               }
             },
             "radius": 1000
           },
           "shadow": {
             "color": {
-              "value": "#000000"
+              "value": "#d6281d"
             },
             "length": 2000
           }
@@ -229,11 +229,11 @@
         }
       },
       "color": {
-        "value": "#f9e7e7",
+        "value": "#d6281d",
         "animation": {
           "h": {
             "count": 0,
-            "enable": true,
+            "enable": false,
             "offset": 0,
             "speed": 1,
             "delay": 0,
@@ -312,7 +312,7 @@
         },
         "random": false,
         "size": false,
-        "speed": 1.5,
+        "speed": 1,  
         "spin": {
           "acceleration": 0,
           "enable": false
@@ -338,16 +338,16 @@
       "opacity": {
         "random": {
           "enable": true,
-          "minimumValue": 0.3
+          "minimumValue": 0
         },
         "value": {
-          "min": 0.3,
+          "min": 0,
           "max": 0.8
         },
         "animation": {
           "count": 0,
-          "enable": true,
-          "speed": 0.5,
+          "enable": false,
+          "speed": 0,
           "decay": 0,
           "delay": 0,
           "sync": false,
@@ -361,7 +361,7 @@
       "shadow": {
         "blur": 0,
         "color": {
-          "value": "#000"
+          "value": "#2596be"
         },
         "enable": false,
         "offset": {
@@ -378,15 +378,15 @@
       "size": {
         "random": {
           "enable": true,
-          "minimumValue": 1
+          "minimumValue": 2
         },
         "value": {
-          "min": 1,
+          "min": 3,
           "max": 3
         },
         "animation": {
           "count": 0,
-          "enable": true,
+          "enable": false,
           "speed": 3,
           "decay": 0,
           "delay": 0,
@@ -485,7 +485,7 @@
           "value": 0
         },
         "mode": "vertical",
-        "speed": 25
+        "speed": 0
       },
       "tilt": {
         "random": {
@@ -555,7 +555,7 @@
         "shadow": {
           "blur": 5,
           "color": {
-            "value": "#000"
+            "value": "#2596be"
           },
           "enable": false
         },

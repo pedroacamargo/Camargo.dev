@@ -1,6 +1,7 @@
 import '../../Styles/landing/WhoAmI.styles.scss'
 import { useState, useEffect } from 'react'
 import { Socials } from '../Socials.component'
+import { Link } from 'react-router-dom'
 
 const WhoAmI = () => {
     let word = "Front-end Developer."
@@ -53,6 +54,7 @@ const WhoAmI = () => {
                 <div className='strip3'></div>
                 <Socials />
             </div>
+            <Link to="/home" className='explore-btn'>Explore</Link>
         </div>
     );
 }
