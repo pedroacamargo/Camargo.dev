@@ -2,6 +2,7 @@ import '../../Styles/landing/WhoAmI.styles.scss'
 import { useState, useEffect } from 'react'
 import { Socials } from '../Socials.component'
 import { Link } from 'react-router-dom'
+import { DangerousButton } from '../global/DangerousButton.component'
 
 const WhoAmI = () => {
     let word = "Front-end Developer."

@@ -1,8 +1,11 @@
+import '../Styles/projects/Projects.styles.scss'
+import { ProjectsContainer } from '../components/projects/ProjectsContainer.component';
+
 const Projects = () => {
     return (
-        <div style={{height: "700px", backgroundColor: "black"}}>
-            <h1>This is the project page</h1>
-
+        <div className="projects-container">
+            <h1 className='main-title-projects'>PROJECTS</h1>
+            <ProjectsContainer />
         </div>
     );
 }

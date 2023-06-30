@@ -45,7 +45,6 @@ function App() {
         <Route path='/about' element={<About />} ></Route>
         <Route path='/projects' element={<Projects />} ></Route>
         <Route path='/contact' element={<Contact />} ></Route>
-        <Route path='*' element={<Landing viewportSize={viewportSize()}/>}></Route>
       </Routes>
     </Router>
   );
