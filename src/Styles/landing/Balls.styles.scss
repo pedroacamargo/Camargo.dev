@@ -26,7 +26,7 @@
     background: radial-gradient(ellipse at top, #5a0808, transparent),
                 radial-gradient(ellipse at bottom, #751818a8, transparent);
     filter: blur(100px);
-    z-index: -1;
+    z-index: 1;
     opacity: 1;
     animation-name: ballAnimated;
     animation-duration: 25s;

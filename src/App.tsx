@@ -22,17 +22,30 @@ function App() {
     await loadFull(engine);
 }, []);
 
+  const viewportSize = () => {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    }
+  }
+
+  const { width, height } = viewportSize();
+
   return (
     <Router>
-      <Particles options={particlesOptions as ISourceOptions} init={particlesInit}/>
+      { width < 600 ? (
+        <></>
+      ) : (
+        <Particles options={particlesOptions as ISourceOptions} init={particlesInit}/>
+      )}
       <Navbar />
       <Routes>
-        <Route path='/' element={<Landing />} ></Route>
+        <Route path='/' element={<Landing viewportSize={viewportSize()}/>} ></Route>
         <Route path='/home' element={<Home/>}></Route>
         <Route path='/about' element={<About />} ></Route>
         <Route path='/projects' element={<Projects />} ></Route>
         <Route path='/contact' element={<Contact />} ></Route>
-        <Route path='*' element={<Landing />}></Route>
+        <Route path='*' element={<Landing viewportSize={viewportSize()}/>}></Route>
       </Routes>
     </Router>
   );
