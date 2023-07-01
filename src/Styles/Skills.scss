@@ -1,0 +1,138 @@
+@import "./VariablesGlobal.scss";
+
+$borderWidth: 300px;
+$borderHeight: 70px;
+$skillsWidth: 200px;
+$skillsHeight: 200px;
+$skillsBorderRadius: 30px;
+$rotationSpeed: 6s;
+
+.skills {
+    @include flexcenter();
+    flex-direction: column;
+    z-index: 1;
+    background-color: black;
+    overflow: hidden;
+
+    position: relative;
+
+    .skills-title {
+        font-family: "Share Tech Mono", monospace;
+        font-weight: normal;
+        padding: 50px;
+        color: rgb(238, 255, 0);
+        font-size: 3em;
+        position: relative;
+        z-index: 70;
+
+        &::before {
+            content: '⚠ SKILLS ⚠';
+            width: 1000px;
+            position: absolute;
+            color: rgba(255, 0, 0, 0.158);
+            font-size: 2em;
+            left: -160px;
+            top: -20px;
+            z-index: -1;
+
+
+        }
+    }
+
+    .skills-container {
+        @include flexcenter();
+        flex-direction: column;
+        margin-top: 10px;
+
+        .skills-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            width: calc($skillsWidth * 4 + (45px * 4));
+
+            padding: 10px;
+
+
+            .skill-container {
+                border-radius: $skillsBorderRadius;
+                width: $skillsWidth;
+                height: $skillsHeight;
+                overflow: hidden;
+                position: relative;
+                margin: 20px;
+
+
+                .rotator {
+                    width: $borderWidth;
+                    height: $borderHeight;
+                    position: absolute;
+                    z-index: 1;
+                    left: calc(50% - $borderWidth/2);
+                    top: calc(50% - $borderHeight/2);
+                    transform: rotate(0deg);
+                    background-color: rgb(255, 72, 0);
+                    animation: rotate3 $rotationSpeed infinite linear;
+                }
+
+
+                .tech-stand {
+                    border-radius: $skillsBorderRadius;
+                    width: calc($skillsWidth - 10px);
+                    height: calc($skillsHeight - 10px);
+                    left: 5px;
+                    top: 5px;
+                    background-color: rgba(15, 1, 1);
+                    position: absolute;
+                    z-index: 2;
+
+                    @include flexcenter();
+                    flex-direction: column;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    span {
+                        margin: 25px;
+                        margin-bottom: -25px;
+                        color: rgb(241, 238, 238);
+                        font-size: 1.2em;
+                        font-family: $fontRaleway;
+                        font-weight: bold;
+                    }
+                }
+
+
+            }
+
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .skills .skills-container .skills-row {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .skills .skills-title {
+        font-size: 2em;
+        &::before {
+            left: -100px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .skills .skills-container .skills-row {
+        width: 400px;
+    }
+}

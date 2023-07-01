@@ -1,0 +1,44 @@
+{
+    "techs": [ 
+        {
+            "img": "./assets/htmllogo.svg",
+            "color": "rgb(255, 72, 0)",
+            "techName": "HTML"
+        },
+        {
+            "img": "./assets/csslogo.png",
+            "color": "#396dd4",
+            "techName": "CSS"
+        },
+        {
+            "img": "./assets/javascriptlogo.png",
+            "color": "yellow",
+            "techName": "JavaScript"
+        },
+        {
+            "img": "./assets/typescript.png",
+            "color": "#1450c7",
+            "techName": "TypeScript"
+        },
+        {
+            "img": "./assets/react.png",
+            "color": "#42daf5",
+            "techName": "React"
+        },
+        {
+            "img": "./assets/sass.png",
+            "color": "#c24286",
+            "techName": "SASS"
+        },
+        {
+            "img": "./assets/bootstraplogo.png",
+            "color": "#9b02c9",
+            "techName": "Bootstrap"
+        },
+        {
+            "img": "./assets/tailwindlogo.png",
+            "color": "#60aaf0",
+            "techName": "Tailwind"
+        }
+    ]
+}

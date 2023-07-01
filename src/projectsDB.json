@@ -3,7 +3,8 @@
         {
             "title": "Portfolio",
             "subtitle": "Website",
-            "background": "./assets/portfoliowebsite.png",
+            "background": "./assets/portfoliowebsite.jpg",
+            "source": "https://camargo-925pw4ugt-pedroacamargo.vercel.app/",
             "technologies": [
                 {
                     "value": "./assets/typescript.png"
@@ -19,7 +20,8 @@
         {
             "title": "Ediwaves",
             "subtitle": "Website",
-            "background": "./assets/ediwaveswebsite.png",
+            "background": "./assets/ediwaveswebsite.jpg",
+            "source": "https://pedroacamargo.github.io/Ediwaves/",
             "technologies": [
                 {
                     "value": "./assets/htmllogo.svg"
@@ -35,7 +37,8 @@
         {
             "title": "Spotify clone",
             "subtitle": "Website",
-            "background": "./assets/spotifyclone.png",
+            "background": "./assets/spotifyclone.jpg",
+            "source": "https://pedroacamargo.github.io/spotify-bootstrap-project/",
             "technologies": [
                 {
                     "value": "./assets/htmllogo.svg"
@@ -52,6 +55,7 @@
             "title": "Pomopedro",
             "subtitle": "App",
             "background": "./assets/pomopedro.png",
+            "source": "https://pedroacamargo.github.io/Pomopedro/pages/timer.html",
             "technologies": [
                 {
                     "value": "./assets/htmllogo.svg"
@@ -68,6 +72,7 @@
             "title": "Typing",
             "subtitle": "JavaScript Game",
             "background": "./assets/typinggame.png",
+            "source": "https://pedroacamargo.github.io/Typing-game/selectLevel.html",
             "technologies": [
                 {
                     "value": "./assets/htmllogo.svg"
@@ -83,7 +88,8 @@
         {
             "title": "Donut Hunt",
             "subtitle": "Ascii based game",
-            "background": "./assets/donuthunt.png",
+            "background": "./assets/donuthunt.jpg",
+            "source": "https://github.com/pedroacamargo/Donut-Hunt",
             "technologies": [
                 {
                     "value": "./assets/C_Logo.png"
