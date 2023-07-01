@@ -7,7 +7,7 @@ export const Project = () => {
     return (
         <>
             {projectsDB.projects.map((project) => (
-                <div className='project'>
+                <a href={`${project.source}`} target='_blank' className='project'>
                     <div className='project-image-container'>
                         <img src={`${project.background}`} alt="" />
                         <div className='hover-container'>
@@ -20,7 +20,7 @@ export const Project = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             ))}
         </>
     )

@@ -6,7 +6,6 @@ const Projects = () => {
         <div className="projects-container">
             <h1 className='main-title-projects'></h1>
             <ProjectsContainer />
-           
         </div>
     );
 }

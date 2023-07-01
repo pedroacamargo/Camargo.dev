@@ -2,3 +2,18 @@ $fontABout: 'Share Tech Mono', monospace;
 $fontCourier: 'Courier New', Courier, monospace;
 $fontRaleway: 'Raleway', sans-serif;
 $fontOpenSans: 'Open Sans', sans-serif;
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes rotate3 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
