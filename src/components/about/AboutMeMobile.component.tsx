@@ -16,7 +16,7 @@ export const AboutMeMobile = () => {
             </p>
 
             <div className="btn-container">
-                <DangerousButton message="Know More"/>
+                <DangerousButton link='about' message="Know More"/>
                 <a href={`${github}`} target='_blank' className='dangerous-btn github-btn'><FontAwesomeIcon icon={faGithub}/></a>
             </div>
 

@@ -55,7 +55,7 @@ const WhoAmI = () => {
                 <div className='strip3'></div>
                 <Socials />
             </div>
-            <Link to="/home" className='explore-btn'>Explore</Link>
+            <DangerousButton message='Explore' link='home' class='explore-btn'/>
         </div>
     );
 }

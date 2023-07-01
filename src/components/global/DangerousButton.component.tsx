@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 
 interface Props {
     message: string;
+    link: string;
+    class?: string;
 }
 
 export const DangerousButton = (props: Props) => {
     return ( 
-        <Link to='/about' className='dangerous-btn'>&#x26A0; {props.message}</Link>
+        <Link to={`/${props.link}`} className={`dangerous-btn ${props.class}`}>&#x26A0; {props.message}</Link>
     )
 }

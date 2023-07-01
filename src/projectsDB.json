@@ -3,7 +3,7 @@
         {
             "title": "Portfolio",
             "subtitle": "Website",
-            "background": "./assets/portfoliowebsite.png",
+            "background": "./assets/portfoliowebsite.jpg",
             "technologies": [
                 {
                     "value": "./assets/typescript.png"
@@ -19,7 +19,7 @@
         {
             "title": "Ediwaves",
             "subtitle": "Website",
-            "background": "./assets/ediwaveswebsite.png",
+            "background": "./assets/ediwaveswebsite.jpg",
             "technologies": [
                 {
                     "value": "./assets/htmllogo.svg"
@@ -35,7 +35,7 @@
         {
             "title": "Spotify clone",
             "subtitle": "Website",
-            "background": "./assets/spotifyclone.png",
+            "background": "./assets/spotifyclone.jpg",
             "technologies": [
                 {
                     "value": "./assets/htmllogo.svg"
@@ -83,7 +83,7 @@
         {
             "title": "Donut Hunt",
             "subtitle": "Ascii based game",
-            "background": "./assets/donuthunt.png",
+            "background": "./assets/donuthunt.jpg",
             "technologies": [
                 {
                     "value": "./assets/C_Logo.png"
