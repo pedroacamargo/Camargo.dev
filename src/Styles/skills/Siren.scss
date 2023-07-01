@@ -1,0 +1,124 @@
+@import "../VariablesGlobal.scss";
+@import './Siren.animation.scss';
+
+
+.siren-container {
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+
+    position: absolute;
+    left: 5vw;
+    top: 100px;
+    opacity: 0.7;
+    transform: rotate(30deg);
+    animation: sirenfloat 30s infinite linear alternate;
+
+
+    .siren-glass {
+        width: 45px;
+        height: 40px;
+        background-color: rgba(255, 0, 0, 0.24);
+        border-radius: 15px 15px 0 0;
+        z-index: -1;
+
+        position: absolute;
+        top: calc(100% - 56px);
+        left: 27px;
+
+        .strip {
+            position: absolute;
+            width: 2px;
+            height: 80%;
+            top: 20px;
+            background-color: rgba(0, 0, 0, 0.219);
+            left: 22px;
+        }
+
+        .siren-light {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(250, 151, 151, 0.445);
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            border-radius: 10px;
+            animation: woonlight 2s infinite ;
+        }
+
+        .siren-light-right {
+            left: calc(13px + 8px);
+            animation: woonlight 2s infinite ;
+            animation-delay: 1s;
+
+
+
+            &::after {
+                content: '';
+                background-color: red;
+                position: absolute;
+                width: 50px;
+                height: 10px;
+                left: -80px;
+                top: -0px;
+                transform: perspective(0.8em) rotateX(0deg) rotateY(10deg) scale(2);
+                filter: blur(10px);
+                z-index: -5;
+                animation: woonlightbeam 1s infinite linear reverse;
+            }
+
+            &::before {
+                content: '';
+                background-color: red;
+                position: absolute;
+                width: 50px;
+                height: 10px;
+                left: -80px;
+                top: -0px;
+                transform: perspective(0.8em) rotateX(0deg) rotateY(10deg) scale(2);
+                filter: blur(10px);
+                z-index: -5;
+                animation: woonlightbeamnegative 1s infinite linear;
+                animation-delay: 1s;
+            }
+        }
+
+        /*
+            0% ->   transform: perspective(0.8em) rotateX(0) rotateY(-10deg) scale(2);
+                    width: 50px;
+                    height: 10px;
+                    left: 50px;
+                    top: -10px;
+                    filter: blur(10px);
+
+            25% ->  width: 10px;
+                    height: 20px;
+                    left: -3px;
+                    top: -0px;
+                    transform: perspective(1em) rotateX(10deg) rotateY(0deg) scale(3);
+                    filter: blur(5px);
+        */
+
+    }
+
+
+    .bottom {
+        width: 60px;
+        height: 20px;
+
+        background-color: rgb(80, 79, 79);
+
+        position: absolute;
+        top: calc(100% - 20px);
+        left: 20px;      
+        
+        border-radius: 0 0 10px 10px;
+        transform: perspective(1.9em) rotateX(20deg);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .siren-container {
+        display: none;
+    }
+}
