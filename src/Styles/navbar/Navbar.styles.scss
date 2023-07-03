@@ -12,7 +12,7 @@ nav {
     overflow: hidden;
     box-shadow: 2px 2px 10px rgba(26, 25, 25, 0.336);
     transition: 1s;
-
+    
     .navbar-container {
         @include size(100%, $navOriginalHeight);
         background-color: $colorNavbar;

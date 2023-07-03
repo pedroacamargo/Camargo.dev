@@ -2,7 +2,7 @@
 
 .forms-container {
     padding-top: 70px;
-    overflow: hidden;
+    //overflow: hidden;
 
     @include flexcenter();
     flex-direction: column;
@@ -190,10 +190,17 @@
         &:last-child {
             margin-left: 50px;
             .input-container .textarea {
-                width: 300px;
-                
+                width: 200px;
+                margin: 10px 10px;
+
+                & + .input-label + .input-icon + .linebot {
+                    margin-left: 2px;
+                }
+
+
                 &:focus + .input-label + .input-icon + .linebot {
-                    width: 300px;
+                    width: 200px;
+                    margin-left: 2px;
                 }
             }
         }
@@ -201,6 +208,16 @@
         .form-section {
             flex-direction: column;
             margin: 20px;
-        }            
+        }    
+        
+        .btn-submit {
+            margin-left: -30px;
+
+        }
+
+        .light-blink{
+            margin-left: -40px;
+        }
+
     } 
 }
