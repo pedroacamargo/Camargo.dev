@@ -18,7 +18,7 @@ export const Skills = () => {
                             <div className='skill-container'>
                                 <div style={{backgroundColor: `${tech.color}`}} className='rotator'></div>
                                 <div className='tech-stand'>
-                                    <img src={tech.img} alt="" />
+                                    <img src={tech.img} alt={`${tech.techName}`} />
                                     <span>{tech.techName}</span>
                                 </div>
                             </div>
