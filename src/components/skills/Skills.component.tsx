@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../Styles/skills/Skills.scss';
-import techs from '../../skills.json'
+import techs from '../../data/skills.json'
 import { Siren } from './Siren.component';
 
 export const Skills = () => {
