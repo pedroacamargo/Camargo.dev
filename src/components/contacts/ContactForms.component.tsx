@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import "../../Styles/contact/ContactForms.styles.scss"
 import emailjs from '@emailjs/browser';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +9,8 @@ export const ContactForms = () => {
     const username = useRef<any>();
     const email = useRef<any>();
     const textarea = useRef<any>();
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [notificationIsOpened, setNotificationIsOpened] = useState<boolean>(false)
 
     const clearForms = () => {
         username.current.value = "";
@@ -19,9 +21,12 @@ export const ContactForms = () => {
     const sendEmail = (e: any) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_qhoywu6','template_vs1p5gw',form.current,'xLPFLTtIufxxG0Vqn').then((result) => {
+        setIsLoading(true);
+
+        emailjs.sendForm('service_qhoywu6','template_vs1p5gw',form.current,'xLPFLTtIufxxG0Vqn').then(() => {
             clearForms();
-            alert("Message was sent successfully")
+            setIsLoading(false);
+            setNotificationIsOpened(true);
         })
     }
 
@@ -52,10 +57,16 @@ export const ContactForms = () => {
                         <span className='linebot'></span>
                     </div>
                 </div>
-                <button className='btn-submit' type="submit" value="Send" >Send</button>
+                <button className='btn-submit' type="submit" value="Send" disabled={isLoading} >Send</button>
                 <div className='light-blink'></div>
             </form>
 
+            <div style={{display: `${isLoading ? "block" : "none"}`}} className="loader"></div>
+            <div className='notification-emailer' style={{right: `${notificationIsOpened ? "20px" : "-300px"}`}}>
+                <div className='close-btn' onClick={() => setNotificationIsOpened(!notificationIsOpened)}>X</div>
+                <h4>Success</h4>
+                <p>The message was sent successfully, thanks for your submit! You received an email in the respective email you input.</p>
+            </div>
         </div>
     )
 }

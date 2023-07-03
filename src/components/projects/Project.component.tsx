@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../Styles/projects/Project.styles.scss'
-import projectsDB from '../../projectsDB.json';
+import projectsDB from '../../data/projectsDB.json';
 
 export const Project = () => {
     

@@ -2,7 +2,7 @@
 
 .forms-container {
     padding-top: 70px;
-    //overflow: hidden;
+    padding-bottom: 100px;
 
     @include flexcenter();
     flex-direction: column;
@@ -23,6 +23,7 @@
 
         padding: 20px;
         width: 80%;
+        z-index: 20;
 
         .form-section {
 
@@ -102,7 +103,7 @@
                 .textarea {
                     width: 700px;
                     height: 300px;
-                    background-color: #3002022a;
+                    background-color: #0000002a;
                     padding: 20px;
 
                     &:focus + .input-label {
@@ -151,6 +152,7 @@
                 margin: 10px;
                 cursor: pointer;
                 z-index: 1;
+                box-shadow: 0px 0px 20px white;
 
                 &:hover {
                     background-color: white;
@@ -159,14 +161,82 @@
             }
 
             .light-blink {
-                width: 70px;
+                width: 100px;
                 height: 50px;
                 position: absolute;
-                bottom: 30px;
-                background-color: white;
-                filter: blur(10px);
-                z-index: 0;
+                bottom: -20px;
+                background-image: linear-gradient(to bottom, rgb(255, 255, 255), transparent 80%);
+                transform: perspective(1.1em) rotateX(35deg) scale(1);
+                filter: blur(18px);
+                z-index: -10;
             }
+    }
+
+    .loader {
+        width: 30px;
+        height: 30px;
+        border: 4px solid #d41c1c50;
+        border-top-color: #d41c1c;
+        animation: spin013151 1s linear infinite;
+        border-radius: 100%;
+        position: fixed;
+        left: 10px;
+        z-index: 99;
+        top: calc(100% - 40px);
+    }
+
+    @keyframes spin013151 {
+        to {
+            transform: rotate(360deg);
+        }
+    }   
+    
+    .notification-emailer {
+        position: fixed;
+        width: 250px;
+        background-color: rgb(47, 255, 82);
+        right: 20px;
+        top: 100px;
+        border-radius: 10px;
+        z-index: 99;
+        transition: .5s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 0;
+            padding: 4px;
+            margin: 5px;
+            border-radius: 10px;
+            color: black;
+            font-family: $fontABout;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+                color: red;
+            }
+
+        }
+
+        h4 {
+            color: black;
+            font-size: 1em;
+            font-family: $fontRaleway;
+            padding: 10px;
+        }
+
+        p {
+            text-align: justify;
+            font-family: $fontRaleway;
+            font-size: .8em;
+            padding: 10px;
+            margin-top: -15px;
+        }
+
     }
 }
 
@@ -189,34 +259,41 @@
 
         &:last-child {
             margin-left: 50px;
-            .input-container .textarea {
-                width: 200px;
-                margin: 10px 10px;
-
-                & + .input-label + .input-icon + .linebot {
-                    margin-left: 2px;
-                }
-
-
-                &:focus + .input-label + .input-icon + .linebot {
-                    width: 200px;
-                    margin-left: 2px;
-                }
-            }
         }
+        
         
         .form-section {
             flex-direction: column;
             margin: 20px;
+            
+            
+            .input-container .textarea {
+                width: 200px;
+                margin: 10px 10px;
+    
+                & + .input-label + .input-icon + .linebot {
+                    margin-left: 2px;
+                }
+    
+    
+                &:focus + .input-label + .input-icon + .linebot {
+                    width: 190px;
+                    margin-left: 2px;
+                }
+            }
+
+
         }    
         
         .btn-submit {
-            margin-left: -30px;
-
+            margin: 0px;
+            margin-bottom: 10px;
         }
 
         .light-blink{
-            margin-left: -40px;
+            margin-left: 0px;
+            transform: perspective(1.1em) rotateX(31deg) scale(1.1);
+            filter: blur(15px);
         }
 
     } 
