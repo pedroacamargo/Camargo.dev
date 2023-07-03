@@ -286,12 +286,12 @@
         }    
         
         .btn-submit {
-            margin-left: -30px;
-
+            margin: 0px;
+            margin-bottom: 10px;
         }
 
         .light-blink{
-            margin-left: -40px;
+            margin-left: 0px;
             transform: perspective(1.1em) rotateX(31deg) scale(1.1);
             filter: blur(15px);
         }
