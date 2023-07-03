@@ -21,11 +21,35 @@ nav {
         align-items: center;
         z-index: 3;
 
-        .logo {
-            color: $logoColor;
-            font-family: $logoFont;
-            font-size: $logoSize;
+        .logo-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
+
+            img {
+                width: 30px;
+                height: 30px;
+                margin-right: 5px;
+            }
+
+            .logo {
+
+                color: $logoColor;
+                font-family: $logoFont;
+                font-size: $logoSize;
+                cursor: pointer;
+                letter-spacing: -2px;
+                position: relative;
+                top: 0;
+                transition: .2s;
+
+                &:hover {
+                    top: -6px;
+                    color: rgb(180, 16, 16);
+                }
+            }
         }
     }
 }

@@ -31,6 +31,9 @@
                 },
                 {
                     "value": "./assets/javascriptlogo.png"
+                },
+                {
+                    "value": "./assets/bootstraplogo.png"
                 }
             ] 
         },
