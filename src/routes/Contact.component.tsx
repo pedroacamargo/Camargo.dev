@@ -5,7 +5,7 @@ import { Footer } from './Footer.component';
 const Contact = () => {
     return (
     <>
-        <div style={{height: "100vh", backgroundColor: "black"}}>
+        <div style={{backgroundColor: "black"}}>
             <ContactForms />
         </div>
     </>
