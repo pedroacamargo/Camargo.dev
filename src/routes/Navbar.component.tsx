@@ -14,7 +14,7 @@ const Navbar = () => {
     }
 
     return (
-        <div style={{position: 'fixed', width: '100%', zIndex: '60'}}>
+        <div style={{position: 'fixed', width: '100%', zIndex: '60', backdropFilter: "blur(10px)"}}>
             <nav>
                 <div className="navbar-container">
                     <Link className='logo' to="/">Camargo.dev</Link>
