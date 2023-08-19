@@ -2,6 +2,7 @@ import React from 'react';
 import '../../Styles/skills/Skills.scss';
 import techs from '../../data/skills.json'
 import { Siren } from './Siren.component';
+import { Reveal } from '../reveal/Reveal';
 
 export const Skills = () => {
     return (
@@ -15,6 +16,8 @@ export const Skills = () => {
                     {techs.techs.map((tech, i) => {
                         
                         return (
+                            <Reveal>
+
                             <div className='skill-container'>
                                 <div style={{backgroundColor: `${tech.color}`}} className='rotator'></div>
                                 <div className='tech-stand'>
@@ -22,6 +25,7 @@ export const Skills = () => {
                                     <span>{tech.techName}</span>
                                 </div>
                             </div>
+                            </Reveal>
                         )
 
 

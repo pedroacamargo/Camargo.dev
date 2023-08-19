@@ -5,17 +5,18 @@ import { AboutMeDesktop } from '../components/about/AboutMeDesktop.component';
 import { AboutMeMobile } from '../components/about/AboutMeMobile.component';
 import { TransitionAbout } from '../components/about/TransitionAbout.component';
 import { Footer } from './Footer.component';
+import { Reveal } from '../components/reveal/Reveal';
 
 const About = () => {
     return (
-        <>
-            <section style={{backgroundColor: "black"}} className='about-container'>
+        <section style={{backgroundColor: "black"}} className='about-container'>
                 <Decorations />
-                <AboutMeDesktop />
+                <Reveal>
+                    <AboutMeDesktop />
+                </Reveal>
                 <AboutMeMobile/>
                 <TransitionAbout />
             </section>
-        </>
     )
 }
 
