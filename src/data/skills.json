@@ -39,6 +39,26 @@
             "img": "./assets/tailwindlogo.png",
             "color": "#60aaf0",
             "techName": "Tailwind"
+        },
+        {
+            "img": "./assets/styled-component-cropped.png",
+            "color": "orange",
+            "techName": "Styled Components"
+        },
+        {
+            "img": "./assets/nextjs.png",
+            "color": "white",
+            "techName": "NextJS"
+        },
+        {
+            "img": "./assets/firabase.png",
+            "color": "yellow",
+            "techName": "Firebase"
+        },
+        {
+            "img": "./assets/redux.png",
+            "color": "purple",
+            "techName": "Redux"
         }
     ]
 }

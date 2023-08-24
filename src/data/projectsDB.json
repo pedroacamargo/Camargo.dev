@@ -18,6 +18,29 @@
             ] 
         },
         {
+            "title": "Mutantial",
+            "subtitle": "Social Network",
+            "background": "./assets/MutantialPNG.png",
+            "source": "https://mutantial.vercel.app/signup",
+            "technologies": [
+                {
+                    "value": "./assets/typescript.png"
+                },
+                {
+                    "value": "./assets/styled-component.png"
+                },
+                {
+                    "value": "./assets/nextjs.png"
+                },
+                {
+                    "value": "./assets/firabase.png"
+                },
+                {
+                    "value": "./assets/redux.png"
+                }
+            ] 
+        },
+        {
             "title": "Ediwaves",
             "subtitle": "Website",
             "background": "./assets/ediwaveswebsite.jpg",
@@ -85,17 +108,6 @@
                 },
                 {
                     "value": "./assets/javascriptlogo.png"
-                }
-            ] 
-        },
-        {
-            "title": "Donut Hunt",
-            "subtitle": "Ascii based game",
-            "background": "./assets/donuthunt.jpg",
-            "source": "https://github.com/pedroacamargo/Donut-Hunt",
-            "technologies": [
-                {
-                    "value": "./assets/C_Logo.png"
                 }
             ] 
         }
