@@ -6,11 +6,12 @@ import { AboutMeMobile } from '../components/about/AboutMeMobile.component';
 import { TransitionAbout } from '../components/about/TransitionAbout.component';
 import { Footer } from './Footer.component';
 import { Reveal } from '../components/reveal/Reveal';
+import { SectionDecorations } from '../components/about/SectionDecorations.component';
 
 const About = () => {
     return (
         <section style={{backgroundColor: "black"}} className='about-container'>
-                <Decorations />
+                <SectionDecorations />
                 <Reveal>
                     <AboutMeDesktop />
                 </Reveal>
