@@ -1,12 +1,12 @@
 import Projects from "./Projects.component";
-import About from "./About.component";
 import Contact from "./Contact.component";
+import AboutPage from "../components/about/AboutPage.compomnent";
 import { Skills } from "../components/skills/Skills.component";
 
 const Home = () => {
     return (
         <>
-            <About />
+            <AboutPage />
             <Skills />
             <Projects />
             <Contact />
