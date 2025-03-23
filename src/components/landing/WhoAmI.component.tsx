@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 import { DangerousButton } from '../global/DangerousButton.component'
 
 const WhoAmI = () => {
-    let word = "Front-end Developer."
-    const wordDB = ['Front-end Developer.', 'Computer Scientist.']
+    let word = "Software Engineer."
+    const wordDB = ['Software Engineer.', 'Computer Scientist.', 'Graphics Engineer.', 'Everything, I\'m a machine.'];
     
-    const [profesion, setProfesion] = useState<string>('Front-end Developer.')
+    const [profesion, setProfesion] = useState<string>('Software Engineer.');
 
     let totalWaitTime = 60;
     let isIncreasing = false, wait = totalWaitTime, option = 0;
@@ -26,7 +26,7 @@ const WhoAmI = () => {
                     if (wait === 0){
                         isIncreasing = false;
                         wait = totalWaitTime;
-                        option = option ? 0 : 1;
+                        option = ( option + 1 ) % wordDB.length;
                     } else {
                         wait--;
                     }

@@ -15,7 +15,7 @@ export const AboutMeDesktop = () => {
 
                 <div className="border-container">
                     <h1>Who Am I?</h1>
-                    <p className='about-text'>I'm a 19 years old programmer studying Computer Science at University of Minho. I've just finished the 1st year of the course. My first contact with programming was when I was 17 years old, while I was at high school (studying economics), I studied by my own web develpment and after that I fell in love with this world. Furthermore, I'm a front-end developer passionate for Cyber Security, an area that I will focus in the future. Nowadays, I'm specialized in developing and designing any kind of website you want with React. If you'd like to check my projects, you can visit my GitHub profile.</p>
+                    <p className='about-text'>I'm a 21 years old programmer studying Computer Science at University of Minho. My first contact with programming was when I was 17 years old, while I was at high school (studying economics), I studied by my own web develpment and after that I fell in love with the world of programming. Currently I'm a full-time fullstack developer at Dtx, doing some freelancing as a Blockchain Game Developer and finishing my computer science degree. In the future I aspire in getting a master degree in Computer Graphics. I also have a Youtube Channel called Aspect Pedro. Check it out ;)</p>
                     <div>
                         <DangerousButton link="about" message='Know More'/>
                         <a href={`${github}`}target='_blank' className='dangerous-btn github-btn'><FontAwesomeIcon icon={faGithub} /></a>

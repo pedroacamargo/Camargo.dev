@@ -1,60 +1,166 @@
-import React from 'react'
-import '../Styles/about/About.styles.scss';
-import { TransitionAbout } from '../components/about/TransitionAbout.component';
-import { SectionDecorations } from '../components/about/SectionDecorations.component';
+import React from "react";
+import "../Styles/about/About.styles.scss";
+import { TransitionAbout } from "../components/about/TransitionAbout.component";
+import { SectionDecorations } from "../components/about/SectionDecorations.component";
+
+const Pin = (props: { left: boolean; title: string, role: string }) => {
+  return (
+    <div
+      style={{
+        width: "25px",
+        height: "25px",
+        borderRadius: "50%",
+        backgroundColor: "yellow",
+        margin: "10px 10px",
+      }}
+    >
+      <div
+        style={{
+          position: "relative",
+          top: "50%",
+          color: "white",
+        }}
+      >
+        <span
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: props.left ? "0" : "100%",
+            transform: props.left
+              ? "translate(-103%, -60%)"
+              : "translate(3%, -50%)",
+            color: "white",
+            fontFamily: "monospace",
+            fontSize: "16px",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {props.role}
+        </span>
+        <span
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: props.left ? "100%" : "0",
+            transform: props.left
+              ? "translate(5%, -50%)"
+              : "translate(-105%, -60%)",
+            color: "red",
+            fontFamily: "monospace",
+            fontSize: "12px",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {props.title}
+        </span>
+      </div>
+    </div>
+  );
+};
+
+const Line = () => {
+  return (
+    <div
+      style={{
+        height: "40px",
+        width: "5px",
+        backgroundColor: "yellow",
+        top: "50%",
+      }}
+    ></div>
+  );
+};
 
 const About = () => {
-    return (
-            <section className='about-container'>
-                <SectionDecorations />
+  const data = [
+    {
+      id: 1,
+      name: "Pin",
+      component: <Pin left title="March 2024 - Present" role="Fullstack engineer @DTx" />,
+    },
+    {
+      id: 2,
+      name: "Line",
+      component: <Line />,
+    },
+    {
+      id: 3,
+      name: "Pin",
+      component: <Pin left={false} title="January 2025 - Present" role="Blockchain Game Developer @ Play Solana" />,
+    },
+    {
+      id: 4,
+      name: "Line",
+      component: <Line />,
+    },
+    {
+      id: 5,
+      name: "Pin",
+      component: <Pin left title="September 2023 - Present" role="Development Depart Director @NECC" />,
+    },
+    {
+      id: 6,
+      name: "Line",
+      component: <Line />,
+    },
+    {
+      id: 7,
+      name: "Pin",
+      component: <Pin left={false} title="Intership 2022/2023" role="Backend Developer @ NFTickit" />,
+    },
+    {
+      id: 8,
+      name: "Line",
+      component: <Line />,
+    },
+    {
+        id: 7,
+        name: "Pin",
+        component: <Pin left={true} title="25/03/2004 - Birth" role="The dream started" />,
+    },
+  ];
 
-                <article>
+  return (
+    <section className="about-container">
+      <SectionDecorations />
 
-                    <div className='about-captions'>
-                        <p>
-                            My first contact with programming was when I was 17 years old, I studied by my own web development while I was at school. In school I studied economics and I had the uncontrollable desire to study programming, because I felt in love with this world and since 17 years, I never stopped.
-                            Nowadays I'm studying Computer Science at University of Minho - Portugal, still 1st year. 
-                            Besides the academic career, I'm a high performance waterpolo athlete, actually playing at Vitoria SC as a goalkeeper in 1st Division.
-                        </p>
-                        <p>
-                            Now talking about knowledge I got by myself:
-                            <ul>
-                                <li>Haskell and C.</li>
-                                <li>HTML, CSS and JavaScript. I have projects in my repository at github (https://github.com/pedroacamargo).</li>
-                                <li>Experience with Tailwind and Bootstrap.</li>
-                                <li>React</li>
-                                <li>Git and GitHub versioning.</li>
-                                <li>I'm currently deepening myself at NestJS and Typescript.</li>
-                            </ul>
-                        </p>
-                        <br/>
+      <article
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {data.map((item) => (
+          <div
+            key={item.id}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {item.component}
+          </div>
+        ))}
+      </article>
 
-                        Academic experience:
-                        - I'm participating at JOIN (Jornadas de Informática) as a front-end developer.
-                        - Collaborator AT NECC (Núcleo de estudantes de Ciências da Computação).
-                        <br/>
-                        Waterpolo achievements:
-                        - 2 appearances at Champions League (2021/2022 & 2022/2023) 
-                        - U13 Best Brazilian goalkeeper & U16 Best Portuguese goalkeeper.
-                        - U14 2nd place (Portugal), U15 state champion (Rio de Janeiro), U13 state 2nd place (Rio de Janeiro)
-                        - U16 Champion (Portugal)
-                        - 2nd place at 2021/2022 Gauteng Tournament (South Africa)
-                        - 4 times national champion (Portugal 1st division)
-                        - 2 times Portugal Cup champion
-                        - 1 time Portugal Supercup champion 
-                    </div>
-                    <div className='about-aside'>
+      <TransitionAbout />
 
-                        <div className='aside-img'></div>
-                        <div className='divider'></div>
 
-                    </div>
-
-                </article>
-                
-                <TransitionAbout />
-            </section>
-    );
-}
+      <div style={{
+        position: "absolute",
+        bottom: "50px",
+        zIndex: 100,
+        backgroundColor: "black",
+        color: "white",
+      }}>
+        This page is under construction (I don&apos; have time to finish it yet 😅)
+      </div>
+    </section>
+  );
+};
 
 export default About;

@@ -15,7 +15,7 @@ export const Footer = () => {
         <footer>
             <div className='copyright-container' style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                 <img src={logo} alt="" style={{marginRight: "20px"}}/>
-                <h3> Created by <strong>Pedro Camargo</strong> &copy;2023</h3>
+                <h3> Created by <strong>Pedro Augusto Camargo</strong> &copy; 2023-2025</h3>
             </div>
             <div className="footer-socials">
                 <a href={`${github}`} className='footer-social-btn' target='_blank'><FontAwesomeIcon icon={faGithub} /></a>
