@@ -1,5 +1,100 @@
 @import 'Variables/Variables.styles.scss';
 
+$bg-dark: #121212;
+$card-bg: #1a1a1a;
+$primary-red: #ff4d4d;
+$text-gray: #a0a0a0;
+$white: #ffffff;
+$glow: 0 0 15px rgba($primary-red, 0.4);
+
+.about-container {
+  min-height: 100vh;
+  color: $white;
+  padding: 120px 20px;
+  font-family: 'Share Tech Mono', monospace;
+
+
+  .content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.timeline {
+  position: relative;
+  border-left: 2px solid rgba($primary-red, 0.2);
+  margin-left: 20px;
+  padding-left: 40px;
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+
+    .icon-wrapper {
+      position: absolute;
+      left: -62px; // Ajuste para centralizar na linha
+      top: 0;
+      background: $card-bg;
+      border: 2px solid $primary-red;
+      border-radius: 50%;
+      padding: 10px;
+      color: $primary-red;
+      box-shadow: $glow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .year {
+      color: $primary-red;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin: 5px 0;
+    }
+
+    .company {
+      color: $text-gray;
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: $card-bg;
+  border-radius: 8px;
+  overflow: hidden;
+
+  th, td {
+    padding: 12px;
+    border-bottom: 1px solid rgba($white, 0.05);
+    text-align: left;
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  th {
+    background: rgba($white, 0.03);
+    color: $text-gray;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+}
+
 section.about-container {
     width: 100%;
     padding-top: 230px;
