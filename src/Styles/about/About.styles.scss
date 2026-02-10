@@ -73,6 +73,28 @@ $glow: 0 0 15px rgba($primary-red, 0.4);
   }
 }
 
+.experience-link {
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 10px;
+  color: #ff4d4d; // O teu vermelho principal
+  text-decoration: none;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 77, 77, 0.3);
+  padding: 5px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background: rgba(255, 77, 77, 0.05);
+
+  &:hover {
+    background: rgba(255, 77, 77, 0.2);
+    border-color: #ff4d4d;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.4);
+    transform: translateX(5px);
+  }
+}
+
 .skills-table {
   width: 100%;
   border-collapse: collapse;
