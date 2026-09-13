@@ -1,64 +1,48 @@
 {
-    "techs": [ 
+    "intro": "I started by learning how to build software. Now I'm just as interested in understanding how it breaks and how to protect it. My Cybersecurity Master's at UMinho and my work as a software engineer bring those two sides together.",
+    "areas": [
         {
-            "img": "./assets/htmllogo.svg",
-            "color": "rgb(255, 72, 0)",
-            "techName": "HTML"
+            "icon": "shield",
+            "color": "#ff704d",
+            "title": "Application Security",
+            "description": "I apply security practices across mobile binaries, APIs, payments, and cloud services to protect against tampering and unauthorized access.",
+            "focus": "Authentication - Access controls - Secure APIs"
         },
         {
-            "img": "./assets/csslogo.png",
-            "color": "#396dd4",
-            "techName": "CSS"
+            "icon": "scan",
+            "color": "#b78aff",
+            "title": "Reverse Engineering",
+            "description": "My Master's thesis work feeds into how I protect mobile software at Kouci against piracy.",
+            "focus": "Mobile binaries - Malware analysis"
         },
         {
-            "img": "./assets/javascriptlogo.png",
-            "color": "yellow",
-            "techName": "JavaScript"
+            "icon": "bug",
+            "color": "#f3d34a",
+            "title": "Penetration Testing",
+            "description": "I've performed authorized game security tests, built proof-of-concept cheats, and reported vulnerabilities in game logic and financial transfers by myself and as part of a team.",
+            "focus": "Vulnerability analysis - Remediation reports"
         },
         {
-            "img": "./assets/typescript.png",
-            "color": "#1450c7",
-            "techName": "TypeScript"
+            "icon": "terminal",
+            "color": "#69c5f8",
+            "title": "Security & Systems",
+            "description": "I work with Linux and virtualized environments, with experience in firmware simulation and secure system integration from collaborating with low-level systems teams.",
+            "focus": "Linux - Kali Linux - Bash - Docker - Qemu"
         },
         {
-            "img": "./assets/react.png",
-            "color": "#42daf5",
-            "techName": "React"
+            "icon": "database",
+            "color": "#70dbb0",
+            "title": "Software Engineering",
+            "description": "I design and build the mobile app, backend, and cloud infrastructure at Kouci, drawing on my experience with databases, authentication, and data integrity.",
+            "focus": "TypeScript - Python - PostgreSQL"
         },
         {
-            "img": "./assets/sass.png",
-            "color": "#c24286",
-            "techName": "SASS"
-        },
-        {
-            "img": "./assets/bootstraplogo.png",
-            "color": "#9b02c9",
-            "techName": "Bootstrap"
-        },
-        {
-            "img": "./assets/tailwindlogo.png",
-            "color": "#60aaf0",
-            "techName": "Tailwind"
-        },
-        {
-            "img": "./assets/styled-component-cropped.png",
-            "color": "orange",
-            "techName": "Styled Components"
-        },
-        {
-            "img": "./assets/nextjs.png",
-            "color": "white",
-            "techName": "NextJS"
-        },
-        {
-            "img": "./assets/firabase.png",
-            "color": "yellow",
-            "techName": "Firebase"
-        },
-        {
-            "img": "./assets/redux.png",
-            "color": "purple",
-            "techName": "Redux"
+            "icon": "blocks",
+            "color": "#e785ca",
+            "title": "Blockchain & Open Source",
+            "description": "I maintained and contributed to Solana Unity SDKs, fixing bugs and helping developers integrate blockchain transactions into their games.",
+            "focus": "Solana · C# · Open Source"
         }
-    ]
+    ],
+    "studying": ""
 }

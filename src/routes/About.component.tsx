@@ -197,13 +197,15 @@ const AboutMe = () => {
               fontFamily: "'Share Tech Mono', monospace",
             }}
           >
-            Native Portuguese speaker with advanced English proficiency. I have
-            a proven track record in developing fullstack web applications using
-            technologies such as Next.js, TypeScript, Express.js, Prisma,
-            PostgreSQL, and the Solana blockchain, with a strong focus on
-            implementing secure coding practices, ensuring data integrity, and
-            building systems resilient against potential cyber threats. Outside
-            of tech, I apply the same discipline as a high-level athlete, I'm a
+            I'm a Cybersecurity Master's student at the University of Minho and
+            a software engineer. I started out building software, and that
+            curiosity now extends to understanding how systems break and how to
+            protect them. My focus is application security, reverse engineering,
+            and penetration testing: from authorized game security testing at
+            Play Solana to protecting mobile software, APIs, and payments at
+            Kouci. I also maintain and contribute to Solana Unity SDKs. I speak
+            Portuguese natively and English at an advanced level. Outside
+            of tech, I apply the same discipline as a high-level athlete. I'm a
             seven-time national champion water polo goalkeeper and have competed
             twice in the Champions League.
           </p>
@@ -211,10 +213,18 @@ const AboutMe = () => {
             <thead>
               <tr>
                 <th>Category</th>
-                <th>Tech & Tools</th>
+                <th>Skills & Tools</th>
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>Application Security</td>
+                <td>Secure APIs, authentication, access controls, data integrity, mobile app protection</td>
+              </tr>
+              <tr>
+                <td>Security Testing</td>
+                <td>Authorized penetration testing, proof-of-concept exploits, vulnerability analysis, remediation reports</td>
+              </tr>
               <tr>
                 <td>Security & Systems</td>
                 <td>Linux, Docker, VirtualBox, Kali Linux, Bash, GitHub</td>
@@ -228,12 +238,12 @@ const AboutMe = () => {
               </tr>
               <tr>
                 <td>Blockchain</td>
-                <td>Solana</td>
+                <td>Solana, Unity SDK development and maintenance, transaction integration</td>
               </tr>
               <tr>
                 <td>Currently Studying</td>
                 <td>
-                  Reverse Engineering, Malware Analysis, CompTIA Security+
+                  Reverse engineering, malware analysis, CTF practice, CompTIA Security+ preparation
                 </td>
               </tr>
             </tbody>
