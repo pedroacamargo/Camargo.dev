@@ -11,7 +11,7 @@ export const AboutMeMobile = () => {
     return (
         <div className='whoami-container-mobile'>
             <h1>Who am I?</h1>
-            <p>I'm a 21 years old programmer studying Computer Science at University of Minho. My first contact with programming was when I was 17 years old, while I was at high school (studying economics), I studied by my own web develpment and after that I fell in love with the world of programming. Currently I'm a full-time fullstack developer at Dtx, doing some freelancing as a Blockchain Game Developer and finishing my computer science degree. In the future I aspire in getting a master degree in Computer Graphics. I also have a Youtube Channel called Aspect Pedro. Check it out ;)<br />
+            <p>I'm 22 and studying Cybersecurity at the University of Minho. My programming journey started at 17, while I was studying economics in high school. I began teaching myself web development and fell in love with building things through code. These days, I'm an Invited Assistant Professor and co-founder and software engineer at Kouci, a water polo analytics app. A lot has changed since those first lines of code, but I still love learning and bringing ideas to life. I also have a YouTube channel called Aspect Pedro. Check it out ;)<br />
             <span>You can check my projects in my GitHub profile.</span>
             </p>
 
