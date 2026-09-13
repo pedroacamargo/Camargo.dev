@@ -3,6 +3,10 @@ $scrollbar-width: 4px;
 $scrollbar-track-color: #000000;
 $scrollbar-thumb-color: #741515af;
 
+// Keep the dark page background when the particle canvas is disabled on mobile.
+html {
+    background-color: #030403;
+}
 
 // Normalize everything
 * {
